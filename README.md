@@ -1,2 +1,2 @@
 # IGONTO
-GONTO an Ontology on Information Governance 
+An Ontology on Information Governance 
