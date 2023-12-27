@@ -1,0 +1,51 @@
+% -*- root: ../thesis.tex -*-
+%!TEX root = ../thesis.tex
+% ******************************* Thesis Chapter 2 ****************************
+
+
+% ----------------------- paths to graphics ------------------------
+
+% change according to folder and file names
+\graphicspath{{2/figures/}}
+% ----------------------- contents from here ------------------------
+
+AIIM - The Association for Information and Image Management defines Enterprise Content Management as:  
+ “Enterprise Content Management is the strategies, methods and tools used to capture, manage, store, preserve, and deliver content and documents related to organizational processes. ECM tools and strategies allow the management of an organization's unstructured information, wherever that information exists.” [1] 
+The essence of an ECM System consists therefore of a collection of infrastructure components that fit into a multi-layer model of technologies for efficiently handling the ‘Information Lifecycle and Governance (ILG)’ of ‘mostly unstructured and semi-structured data’. As such, Enterprise Content Management is the necessary fabric of the overarching E-Business application area. 
+
+\section{3.1 What is an ECM system all about?}
+The constantly progressing penetration of IT in the private and in particular within businesses has given rise to an immense volume of all type of data (rich media data) in which ‘unstructured data’ represents the predominant portion.  The nontrivial technical hurdles to process and manage these volumes of information has forced companies in to an effort to adopt new technologies and methods, borrowed the hype on clouds that allows scale at an affordable cost. This has led the ECM world to move away from static, monolithic architecture designs towards an all virtualized and componentized content repository concept based on ‘Software Defined Infrastructure’ and ‘Content Management as a Services’ (CMaaS) models. The aim for ECM solutions architect is to employ a business model that allows to offer basic content services on-demand to ECM customers. Think of a ‘Build your own ECM Application’ BYOCA-model which in essence represents an individually composed solution for each customer or better each tenant. Thus the ECM systems must cope with the requirement to support massive multi-tenancy and to provide Content Management as a Service – CMaaS.   
+Current trends in IT Hardware technology show that these goals can only be achieved by means of exploiting a scale-out approach using commodity hardware, which is configured in a programmatic fashion and provisioned on-demand. 
+As a consequence the underlying IT-infrastructure must provide a massive scalability at an affordable price. By looking at today key cloud players we realize that both goals scalability and affordable price have become possible thanks to newest advances in dynamic workload management and cloud technology. 
+ Our conclusion is that today’s design alternatives to the traditional way of purchasing a monolithic shrink wrapped ECM solution is to acquire ECM services based on Service Level Agreements (SLA) ‘on-demand’ and pay by ‘consumption’. Very much like how we consume electricity for our appliances.  
+ We looked at typical ECM companies in the finance market and have observed that meanwhile these companies have recognized these trends and are starting to restructure their business processes. While key business areas like legal compliance, electronic discovery, and document retention management remain their production systems must be adjusted to fit in to the new environment and serve a new class of end users requirements.
+
+
+\subsection{3.1.1	Key functional requirements:}
+\begin{enumerate}
+\item A heterogeneous, geographically distributed repository infrastructure framework based on storage subsystems with elaborated storage management capabilities that supports rich media data and multi-media indexing \& search capabilities as well as a federated repository abstraction layer. 
+\item Repository Abstraction Layer - RAL - an abstraction and federation layer that ensures application services gain access to the actual physical repository in a seamless way and agnostic of the actual physical storage location.
+\item Support for rich media and indexing \& search of rich media 
+\item Provide e-Discovery services to support compliance investigations and its related forensic search and queries with the required performance at an affordable cost.
+\item Provide a content centric workflow and document archive management framework. 
+\item Provide a flexible client application integration layer.
+\end{enumerate}
+
+\subsection{3.1.1	Key functional requirements:}
+The architecture design of an ECM system must put major focus on the performance and scaleability such to efficiently handle an unknown and variable number of documents, ingested at highly variable rates by a possibly very large population of end users or principals in index with minimal time delay. Following three key non-functional requirements for the ECM systems:
+
+
+\begin{enumerate}
+\item Support high throughput and low response times under normal production conditions  
+\item Have the ability to dynamically adapt to the current load situation by acquiring additional resources or releasing unused ones when appropriate
+\item The design goal is to match the load variations and minimizing system power
+\item Be reliable and available such to achieve the required business continuity goals
+\end{enumerate}
+
+
+
+
+
+% ---------------------------------------------------------------------------
+% ----------------------- end of thesis sub-document ------------------------
+% ---------------------------------------------------------------------------

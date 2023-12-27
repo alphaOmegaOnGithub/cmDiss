@@ -1,0 +1,33 @@
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Title Page}{i}{section*.1}%
+\babel@toc {german}{}\relax 
+\contentsline {chapter}{Conclusion and outlook (Zusammenfassung)}{iii}{chapter*.2}%
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Abstract}{v}{chapter*.3}%
+\contentsline {chapter}{List of Figures}{xiii}{chapter*.6}%
+\contentsline {chapter}{List of Tables}{xv}{chapter*.7}%
+\contentsline {chapter}{Abbreviations}{xvii}{section*.8}%
+\contentsline {chapter}{Symbols}{xvii}{section*.10}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Background:}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Goals}{2}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Expectations}{2}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Approach}{3}{subsection.1.1.3}%
+\contentsline {section}{\numberline {1.2}SI-Units}{4}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Definition of Enterprise Content Management (ECM)}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}3.1 What is an ECM system all about?}{5}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}3.1.1 Key functional requirements:}{6}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}3.1.1 Key functional requirements:}{6}{subsection.2.1.2}%
+\contentsline {chapter}{\numberline {3}ECM System Architecture and Design}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Core Components of ECM Systems}{7}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Outline of Enterprise Content Management Systems}{8}{section.3.2}%
+\contentsline {section}{\numberline {3.3}4.3 Workload Model of ECM Systems}{10}{section.3.3}%
+\contentsline {section}{\numberline {3.4}The ECM Reference Model}{12}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Sum - Algorithm}{13}{chapter.4}%
+\contentsline {chapter}{\numberline {5}PGF-plots from python}{15}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Asymptote}{17}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Discussion}{19}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Materials and Methods}{21}{chapter.8}%
+\contentsline {chapter}{Appendix \numberline {A}Appendix A }{23}{appendix.1.A}%
+\contentsline {chapter}{References}{23}{section*.16}%

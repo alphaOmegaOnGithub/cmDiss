@@ -1,0 +1,27 @@
+Information Governance (IG), IG Lifecycle Management , Ontology
+Pattern: IG Pattern?, Cloud Pattern, Kubernetes Pattern, Data Mapper Pattern, Aktive Record Pattern,  
+Templates: Kubernetes Declarative Service Templates, TOSCA Declarative Service Templates 
+
+    Virtuelle Wissensgraphen 
+    ... dieselben Datenspeicher und -formate für alle Arten von Analysen zu nutzen und auf diese Weise die Komplexität von Datenarchitekturen zu reduzieren [4]. In In den aktuell beobachtbaren Umsetzungen von Lakehouses kommen hierfür hochskalierbare Datenspeicher zum Einsatz, wie beispielsweise Cloud Object Stores oder verteilte Dateisysteme, auf welchen die Daten in offenen Formaten gespeichert werden. Strukturierte Daten werden dabei typischerweise in spalten-orientierten Datenformaten, wie beispielsweise Apache Parquet1, abgelegt, welche das effiziente Speichern und Abfragen der Daten in relationaler Form ermöglichen. Unter Ausnutzung technischer Metadaten lassen sich auf diesen dann auch typische Funktionen von Data Warehouses, wie die Möglichkeit zum Abfragen von Daten mittels Anfragesprachen, auf leichtgewichtige Weise implementieren.
+    relationale Repräsentation der Daten nur bedingt für komplexere
+    Analysen [5], da insbesondere transitive Beziehungen zwischen Entitäten nur umständlich identifiziert und untersucht werden können und das Fehlen von domänenspezifischen Informationen das Verständnis der Daten erschwert. In diesen Fällen können Wissensgraphen [6] Abhilfe leisten, da sie Beziehungen zwischen Entitäten intuitiv als Kanten zwischen Knoten modellieren, komplexe Analysen mit Hilfe graph-basierter Anfragesprachen und geeigneter Visualisierungswerkzeuge unterstützen und Ontologien [7] den Wissensgraphen eine hohe semantische Ausdrucksstärke verleihen können [7]. 
+    komplexe Datenarchitekturen und die parallele Verwendung mehrerer Datenspeicher und -formate zu vermeiden, bietet sich auf diesen Datenplattformen insbesondere die Konstruktion von virtuellen Wissensgraphen [8] an.
+    definiert, welche beschreiben, wie sich die in den Relationen enthaltenen Entitäten in einen
+    globalen Wissensgraphen einfügen. Anfragen gegen den virtuellen Wissensgraphen können mit
+    Hilfe dieser Abbildungen dann in Anfragen gegen die auf dem Lakehouse gespeicherten Daten
+    übersetzt werden. Während bereits verschiedene Konzepte und Technologien für die Konstruktion und Analyse von virtuellen Wissensgraphen existieren (vgl. Xiao et al. [8]), ist zum aktuellen Zeitpunkt jedoch unklar, wie diese auch auf Lakehouses und den damit einhergehenden Architekturen und Datenformaten praxistauglich eingesetzt werden können.
+    
+
+    Literatur
+    [6] A. Hogan, E. Blomqvist, M. Cochez, C. d’Amato, G. d. Melo, C. Gutierrez, S. Kirrane, J. E. L. Gayo, R. Navigli, S. Neumaier et al., “Knowledge graphs,” ACM Computing Surveys (CSUR), vol. 54, no. 4, pp. 1–37, 2021. 
+    [7] C. Feilmayr and W. Wöß, “An analysis of ontologies and their success factors for application to business,” Data & Knowledge Engineering, vol. 101, pp. 1–23, 2016. 
+    [8] G. Xiao, L. Ding, B. Cogrel, and D. Calvanese, “Virtual knowledge graphs: An overview of systems and use cases,” Data Intelligence, vol. 1, no. 3, pp. 201–223, 2019.
+
+    ==============================
+    IG Pattern and a service template based implementation
+        - Pattern based architecture design 
+        - Template based Service Implementations
+        
+
+    

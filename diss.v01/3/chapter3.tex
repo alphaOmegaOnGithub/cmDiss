@@ -1,0 +1,188 @@
+% -*- root: ../thesis.tex -*-
+%!TEX root = ../thesis.tex
+% ******************************* Thesis Chapter 3 ****************************
+
+
+% ----------------------- paths to graphics ------------------------
+
+% change according to folder and file names
+\graphicspath{{3/figures/}}
+% ----------------------- contents from here ------------------------
+
+
+
+
+%\begin{figure}[htb]
+%  \centering
+%
+%\def\svgwidth{8cm}
+
+%  \includegraphics[width=0.95\textwidth]{3/TikzPictures/example1.tikz}
+%  \caption[Tikz Example]{ Tikz Example.} 
+%  \label{fig:tikz_exapmle}
+%\end{figure}
+\section{Core Components of ECM Systems}
+Today one can choose from many commercial content management and archiving solutions that handle unstructured content [Gartner]. Despite the diversity of the many disparate ECM products on the market, they all share the following capabilities that make up a content management framework.  
+\begin{enumerate}
+\item Content collection, data input and capture services 
+\item Content classification, meta data extraction and index services  
+\item A catalog database with an implied data and document model  
+\item Support for metadata indexing and search  
+\item Full Text indexing \& search using clusters or full text engines (e.g. Solr et al) and distributed full text indexes.  
+\item Support for Multi-media indexing \& search (i.e. Search by Image, Audio and Video content) 
+\item A heterogeneous repository infrastructure based on a storage subsystem with elaborated storage management functions i.e. the capability to satisfy hierarchical storage management needs and to hold rich media data.  
+\item Support of workflow and workflow engines  
+\item Resource management and administrative layers 
+\item Data Output and data delivery services 
+\item Flexible application and Business integration layers 
+\item Repositories consisting of the following system components 
+\begin{enumerate}
+\item Global Catalog employing  a relational index, document model  and administrative functions
+\item Content Resource Managers
+\begin{enumerate}
+\item One or more  Hierarchical Storage Systems i.e. 
+Block Storage, Object Storage, Off-line Storage (Tapes, Optical, Cloud ) 
+\item Local object catalog and local administrative functions 
+\end{enumerate}
+\item Full Text Catalog that complements the Global Catalog 
+\begin{enumerate}
+\item Cluster of Full Text Search Engines   
+\item ull Text Index Storage Subsystems (Fast Block Storage)
+\end{enumerate}
+\item Core Content Services including:
+\begin{enumerate}
+\item Business Process Management (BPM) Collaboration Services.
+\item Content Collection Services
+\item Content Classification Services 
+\item Content Delivery Services 
+\item Compliance Services 
+\begin{enumerate}
+\item Discovery 
+\item eRecords Management
+\end{enumerate}
+\item Client Application Layer (Repository Abstraction Layer) 
+\item Decision Support Services  (DSS)
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
+\section {Outline of Enterprise Content Management Systems}
+Recall that we want to surface the differences and commonalities of an ECM system versus a Data Lake. For this we need to better understand what constitutes an ECM system by looking at typical use case scenarios and the details of typical user activities and the implied flow of data. This analysis is then used to derive the functional and non-functional requirements and help define a representative workload model for the one and the other system. The end goal of this exercise is to sketch the typical working environment for ECM systems and to compare it with that of Data Lakes. 
+
+We stated before that ECM systems are meant to manage the unstructured information their related work processes in a corporation. The main goal is to manage the content life-cycle from creation to disposition therefore ECM systems are concerned with the routing of in- and out-bound information flows, the integration with business applications and managing the end user’s work-space. In this context, information must be indexed and classified for later processing and archiving. The next Figure outlines the architecture of an ECM system.
+
+
+Figure 1- ECM System Architecture Overview
+
+Figure 2 outlined the 3 relevant layers exposed by a typical ECM system which they are:  
+\begin{enumerate}
+ \item Repositories consisting of the following system components 
+\begin{enumerate}
+ \item Global Catalog employing  a relational index, document model  and administrative functions
+ \item Content Resource Managers
+\begin{enumerate}
+ \item One or more  Hierarchical Storage Systems i.e. 
+ \item Block Storage, Object Storage, Off-line Storage (Tapes, Optical, Cloud ) 
+ \item Local object catalog and local administrative functions 
+\end{enumerate}
+ \item Full Text Catalog that complements the Global Catalog 
+\begin{enumerate}
+ \item Cluster of Full Text Search Engines   
+ \item Full Text Index Storage Subsystems (Fast Block Storage)
+\end{enumerate}
+\item Core Content Services including:
+\begin{enumerate}
+ \item Business Process Management (BPM) Collaboration Services.
+ \item Content Collection Services
+ \item Content Classification Services 
+ \item Content Delivery Services 
+ \item Compliance Services 
+\begin{enumerate}
+ \item e-Discovery 
+ \item Records Management
+\end{enumerate}
+ \item Client Application Layer (Repository Abstraction Layer) 
+ \item Decision Support Services  (DSS)
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
+Shown at the bottom of Figure 3 above one can see the content repository layer which is at the core part of an ECM architecture. The term repository depicts an abstract entity can be accessed via a so called RAL the -'Repository Abstraction Layer'. The RAL ensures that access to the actual physical repositories is location agnostic and seamless. The upper services layers when archiving and retrieving a document via the RAL do not have to know their physical storage location nor the communication protocol used by the RAL CRUD methods. 
+As matter of fact investigation have shown, that companies due to business and legal compliance reasons must entertain more than one repository in production and that those repositories are in general geographically distributed. Thus the RAL layer not only is an abstraction but also a federation layer i.e. another key characteristic of ECM systems.  
+
+In summary the repository with its storage systems is responsible for storing and managing the actual electronic data and content, in its original and other derived formats created via transcoding facilities into renditions required to serve business processes from the upper layer.  
+ 
+The layer in the middle of Figure 4 relates to the core business needs of enterprises when it comes to deal with their unstructured data assets. It is the ‘Content Services’ layer, responsible to handle and manage the document according to specific business process logic.  
+ 
+These core services rely on a virtualized central catalog build upon a decentralized distributed database cluster with an implied document model that describes the persisted metadata which is required to support search and retrieval of business relevant data.  This relational catalog is complemented by a distributed full text index and the relational search functions are complemented their full text search companions. In addition, very often we have also seen the requirement to support rich media data with multi-media indexing \& search capabilities that utilize new and more advanced technologies to better deal with ‘Search by Image’, Search by Audio’ and Search by Video’ content.  
+ 
+Another trend that ECM system must satisfy is compliance and legal discovery. That is, the traditional relational catalog must be enhanced to also support information discovery services so called ‘e-Discovery’ functions which look more like forensic search then traditional SQL search functions needed to support legal and corporate compliance requirements as well as for creating new knowledge from crawling raw information and searching unknown patterns and the context around them. Given the size of the collections archived the e-Discovery business also must be tailored and tuned towards the ability of handling of very large result lists produced by compliance investigations and its related forensic queries with the required performance at an affordable cost.  
+ 
+Next we have a business process management framework that allows the orchestration of content centric business processes and their respective data flows complemented by an electronic archive management framework which can be seen as the central service that a Content Management system must provide such to satisfy the specific business needs and to comply with corporate and legal governance.
+
+The last and top most, upper layer is the Clients Application Layer where end user access is facilitated via custom UI or off-the-shelf business applications which ….
+\section{4.3	Workload Model of ECM Systems}
+A workload model is defined from key use case scenarios and describes the load distribution that the mix of operations performed by the user population and application push onto the system during normal production.
+
+In this chapter we will use what we learned so far to look at the characteristics of content centric work processes and distil a representative mix of core operations that defines the typical ECM workload model which then can be used to compare against its Data Lake counterpart.
+
+In the previous chapter we stated that the main purpose of an ECM system is to function as the information hub provisioning all relevant unstructured data to business processes. Ideally an Enterprise Content Management System tracks and manages all content that enters, traverses and exits the enterprise. Email is a good example, but any other data type can be used as well. As soon as the data is loaded the ECM system takes control and upon request it grants or denies access through its standard interfaces independent of data type and physical storage location. This means that information is captured, parsed, classified, interpreted and eventually archived in conformance to the class specific retention policies. From a workload perspective operations like ingest, indexing and disposition are the predominant ones but there are other operations that add also to the workload.
+
+The key operations that contribute to the overall workload are:
+\begin{enumerate}
+\item Load \& Indexing:  
+During ingest the document is loaded in to the content repository and cataloged with the required metadata in the ECM catalog. The metadata record is then linked with the content object in the repository and guarded by a referential integrity constraint. Enforcing referential integrity between catalog and repository is necessary to avoid dangling pointer and orphan objects. 
+\item De-duplication:  
+De-duplication becomes a mandatory feature when dealing with large collections in an enterprise. Team members usually share copies of document thus a single document will be stored multiple time in an enterprise repository. Therefore once a document is stored or updated a periodic, asynchronous task will compute the content hash, look up the catalog trying to find match and then store the hash as part of the metadata record. If the look-up yields a hit then the content is removed from the repository the metadata record is updated with the storage location of the content object now shared by 2 or more records.
+\item Full Text (FT) Indexing:  
+A full text index complements the ECM catalog with relevant pieces of text extracted from the content object. The FT index complement the catalog and enhances overall search and retrieval. The FT indexing job is a scheduled with the task the periodically retrieves new or updated documents to feed the full text engine, which in turn extracts relevant business information, enriching it with context relevant tags and storing the extract it in the full text index.
+\item Classification:  
+Document classification is another important piece of required work, especially for compliance reasons. Documents and their content is always under scrutiny of corporate governance and legal compliance rules and must be classified according to corporate taxonomies. Those which do not comply have to be intercepted and re-directed and funneled into the appropriate processing queue.  
+\item Rendering \& Trans-coding:  
+The different business scenarios in a company often require a specific format of the document at hand for being able to work with it. Especially in cases were rich media is involved, either a document or an attachment to a document. For example, an office document that is rendered into web page or a PDF file. Or an image that is rendered into different image formats. Another good example are video files, for compliance reasons the video must be archived untouched in its original format, but for streaming it into the network or for working on it at video work places often a trans-coded version of the video file is required.  
+\item Content Centric workflow 
+Content centric workflow relates to the load generated by industry specific business applications and the way they integrate with the ECM system. Despite the variety of different applications that might exist the mix of core operations that affects the repository can be reduced to the five CRUDS methods i.e. Create, Retrieve, Update, Delete and Search and the load they generate can be measured at the RAL layer. 
+\item Archiving:  
+Archiving is the final state of document, which means the document has become immutable and is now stored as the original copy until it gets disposed. 
+\item Delivery:  
+Active content i.e. content that is being actively processed by business processes is moved around and delivered to inside and external location creating its share of load on to the ECM system.
+\item Disposition:  
+Disposition happens when document have aged past their retention period dictated by a corporate or legal compliance policy. The act of disposing documents is called expunging and is a massive batch operation that can push an extensive load onto the ECM Catalog, Full Text Engine, the Storage Systems and the Network.
+\end{enumerate}
+In the end, the actual workload pushed onto the system will be the sum of a mix of primitive archive operations.
+\section{The ECM Reference Model}
+A Content Management System delivers a set of data services that allow the processing of business information and the acquisition of informational insights from applications and users. With these characteristics in mind we can define the ECM Reference Model as follows:
+
+Figure:  1 ECM System Reference Model
+
+First there is the need of an Enterprise Data Architecture that feeds and fosters the on-line ecosystem. By this we mean, a well suited software services framework for opening the enterprise data to trusted communities with the benefit of optimizing business value and business minimizing risk. CMaaS infrastructure would have to provide the ability of defining a common quality of services (QoS) and service level agreements (SLA) governance across platforms. Complemented by QoS and SLA management standards regarding integrity, compliance, and risk.  ECM systems must expose a collaborative intelligence that enables exponential growth of applications developed by the community on the platform.   
+ 
+The inherent distributed nature of service consumption will also push the need for service problem determination automation in the cloud with innovative way of problem resolution and dispute management. Both syntactic and semantic interoperability at process, data, and UI and service composition level will require new types of synchronization at federation level. Services will be Web delivered or as an alternative put into an appliance. Companies will have to provide organization and maintenance constructs for content in order to help discover and identify high value enterprise data assets. And last but not least tools are needed to evaluate, analyze business processes \& IT impacts. 
+ 
+Thus we might conclude that given the distributed nature of the on-line infrastructure, scaleability will inherently be based on a scale-out model.   
+ 
+Somewhat orthogonal to the above mentioned system capabilities, from an administrative stand-point the Current ECM systems have an Enterprise Data Architecture that feeds and fosters the on-line ecosystem. This architecture is based on a well suited software services framework that opens enterprise data collections to trusted communities with the benefit of optimizing value and minimizing risk. At the functional level they expose a collaborative intelligence that enables growth of applications due to the collaborative effort of the internal and external communities.
+
+Comparison between ECM Systems and Data Lakes
+Type	ECM System	Data Warehouse	Data Lake
+Use scenarios			
+			
+Table: Workload Model			
+			
+System Architecture Component 			
+Data Base 	Catalog 		
+Full Text Index			
+Workflow Engine			
+eDiscovery			
+Record Management 			
+Hierarchical Storage			
+Application Component			
+			
+
+    
+
+
+% ---------------------------------------------------------------------------
+%: ----------------------- end of thesis sub-document ------------------------
+% ---------------------------------------------------------------------------
+
