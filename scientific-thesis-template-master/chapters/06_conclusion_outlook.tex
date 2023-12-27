@@ -1,0 +1,16 @@
+This thesis demonstrates that the approach by Shao~\cite{shao} can be operated properly on a \textit{Docker} based container environment but it was not possible to apply a one to one porting into a Kubernetes cluster.
+The cluster needs to be further enhanced to handle stateful database services in an automated manner by leveraging Kubernetes technology.
+\\
+\\
+This work evaluates two approaches of operating stateful applications inside Kubernetes.
+Based on this investigation the first concept is proposed and implemented in the form of a prototype.
+While conducting reliability tests it turned out that the developed solutions of running the \textit{Data Catalog} and \textit{Object Catalog} of the ECM system could not guarantee a stable and reliable operation inside the cluster. 
+The objective of managing stateful database applications inside a Kubernetes cluster poses as a serious challenge and requires a much more complex deployment design.
+This is mainly because Kubernetes was designed to autonomously manage stateless workloads.
+Therefore the stateful components were removed and managed on an external infrastructure.
+In the end the effort was split in two phases: primarily focus on implementing the stateless components and secondarily further improve the initial approach to handle stateful components.
+Given the time constraints for this thesis and the complexity of the task the stateful databases services are left on the external docker environment.
+Additionally the stateless applications which stayed inside the cluster required the creation of a new Docker image which eliminated the need of external data sources mounted into the \textit{Pods}.
+\\
+\\
+Future work might improve the developed prototype through investigating the areas of load balancing, dynamic scaling and security in Kubernetes clusters.

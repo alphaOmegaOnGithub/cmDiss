@@ -1,0 +1,55 @@
+\label{chap:concept}
+The following chapter describes the applied changes to a containerized Enterprise Content Management application introduced by~\cite{shao} to be operated within a Kubernetes cluster.
+
+\section{Implications of a Kubernetes Cluster}
+After its donation to the open source community by Google Kubernetes has become the most popular orchestration platform to operate and deploy containerized applications with minimum manual effort.
+The core concept of Kubernetes is the autonomous management of stateless applications which consist of identical, swappable and replaceable containers.
+Enterprise Content Management systems and other real world applications typically need some kind of stateful service which is concerned with persistent data storage~\cite{KUB2}.
+\\
+\\
+After analyzing the dependencies of the containerized ECM applications created by Shao~\cite{shao} we found out that the components can be divided in two web applications and two database applications.
+Hence the web applications could be operated as stateless applications without further customization.
+The considered containers are \textit{wasicn} with its web client component as well as \textit{wasrm} with the encompassed resource manager component.
+The other components that are needed to construct a working ECM system are the data and the object catalog which both rely on databases to work properly.
+
+\section{Aspired ECM System Topology}
+The management of stateful applications like databases in a Kubernetes cluster is not trivial since it was designed to handle stateless workloads while keeping stateful components outside the managed cluster~\cite{KUB2}.
+To pave the way to an operational ECM system we need to carefully examine how the state of the data as well as the object catalog can be preserved while being available to the cluster.
+Additionally the initial Docker images provided by~\cite{shao} relied on the application data and executables to be locally present on the host machine.
+There are two possibilities to achieve that each with its advantages and drawbacks:
+\begin{itemize}
+    \item[]{\textbf{Maintaining the State on the Host Node}\\
+    To keep the state in filesystem of a host node it is crucial to upload the necessary data to that node on which the corresponding application will be operated.
+    This approach implies that each potential node on which the corresponding application could be relocated by the \textit{Scheduling Layer} of the cluster has to contain the needed data.
+    The data allocation on the computing nodes is illustrated in~\cref{fig:node_storage}.
+    It shows that only nodes that have matching data can operate a certain application.
+    In contrast to \textit{Node 2}, \textit{Node 1} and \textit{Node 3} contain the necessary \textit{Data} in their local filesystem and are able to host the application.
+    Replicating the required data across all nodes of a large cluster leads to an overhead in storage allocation.
+    By maintaining the data exclusively on dedicated nodes that operate only one specific application the flexibility and the availability of the whole system can be affected.
+    In case of a failing node the \textit{Scheduling Layer} can not relocate the application autonomously on another node without applying procedures that ensure that the required data is present on the particular node.
+    The biggest advantage of this procedure is the minimization of the latency of read and write operations all required data is already present on the local node.
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\textwidth]{graphics/node_storage.svg}
+    \caption{Data Allocation in Local Filesystems of Host Servers in a Cluster}
+    \label{fig:node_storage}
+\end{figure}
+    }
+    \item[]{\textbf{Removing the State completely from the cluster}\\
+    Relocating the state into an external storage service allows the \textit{Scheduling Layer} to scale or move the web applications without assumptions about the configuration of the computing nodes that form the cluster.
+    The external service can be located on a separate Virtual Machine or on a physically separated host.
+    Since the storage service is now moved to an external infrastructure it needs its own maintenance effort which can not be supervised through the \textit{Service Management Layer} of the cluster.
+    Furthermore it can lead higher latencies of read and write operations due to the potential distance of the external infrastructure to the cluster.
+    }
+\end{itemize}
+Given the complexity of setting up and managing stateful services in Kubernetes this thesis is restricted to stateless services.
+Therefore the state is removed entirely from the cluster and an external Network File System server is utilized.
+Further a stateful data service requires a much more complex cluster design and is easier to maintain and scale on its own.
+Therefore the containerized applications can be scaled across the cluster independent of whether the volumes are mounted on a particular node or not.
+The following~\cref{fig:high_level_topology} illustrates the initially aspired topology with all storage capacities transferred to the NFS server.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\textwidth]{graphics/high_level_topology.svg}
+    \caption{Initial Cluster Topology}
+    \label{fig:high_level_topology}
+\end{figure}

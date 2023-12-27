@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100.58112mm"
+   height="70.45784mm"
+   viewBox="0 0 100.58112 70.45784"
+   version="1.1"
+   id="svg6674"
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)"
+   sodipodi:docname="orch_layers.svg">
+  <defs
+     id="defs6668" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.3398479"
+     inkscape:cx="184.83235"
+     inkscape:cy="203.32194"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:snap-global="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1252"
+     inkscape:window-height="785"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0">
+    <sodipodi:guide
+       position="98.54486,-3.9396558"
+       orientation="1,0"
+       id="guide7443" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata6671">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-37.908749,-44.678525)">
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.195769"
+       id="rect7237"
+       width="82.793709"
+       height="6.9912314"
+       x="53.721191"
+       y="44.776409" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="86.968742"
+       y="49.784077"
+       id="text7256"><tspan
+         sodipodi:role="line"
+         id="tspan7254"
+         x="86.968742"
+         y="49.784077"
+         style="font-size:4.23333px;stroke-width:0.264583">Services</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.195538"
+       id="rect7237-0"
+       width="82.596466"
+       height="6.9914618"
+       x="53.819813"
+       y="55.477962" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="75.046997"
+       y="60.061996"
+       id="text7256-6"><tspan
+         sodipodi:role="line"
+         id="tspan7254-0"
+         x="75.046997"
+         y="60.061996"
+         style="font-size:4.23333px;stroke-width:0.264583">Service Management</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.195769"
+       id="rect7237-0-2"
+       width="82.793709"
+       height="6.9912314"
+       x="53.721191"
+       y="66.179741" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:start;text-anchor:start;stroke-width:0.264583"
+       x="84.676376"
+       y="70.763664"
+       id="text7256-6-4"><tspan
+         sodipodi:role="line"
+         id="tspan7254-0-0"
+         x="84.676376"
+         y="70.763664"
+         style="font-size:4.23333px;text-align:start;text-anchor:start;stroke-width:0.264583">Scheduling</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.195999"
+       id="rect7237-0-2-3"
+       width="82.990952"
+       height="6.9910011"
+       x="53.62257"
+       y="77.109886" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:start;text-anchor:start;stroke-width:0.264583"
+       x="72.962311"
+       y="81.655449"
+       id="text7256-6-4-4"><tspan
+         sodipodi:role="line"
+         id="tspan7254-0-0-4"
+         x="72.962311"
+         y="81.655449"
+         style="font-size:4.23333px;text-align:start;text-anchor:start;stroke-width:0.264583">Resource Management</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.134294"
+       id="rect7237-0-2-3-5-8-4"
+       width="38.621307"
+       height="7.0527058"
+       x="53.754234"
+       y="88.081512" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="55.292347"
+       y="93.127144"
+       id="text7416"><tspan
+         sodipodi:role="line"
+         x="55.292347"
+         y="93.127144"
+         style="stroke-width:0.264583"
+         id="tspan7418">Container Runtime</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.134294"
+       id="rect7237-0-2-3-5-8-4-6"
+       width="38.621307"
+       height="7.0527058"
+       x="97.988113"
+       y="88.081505" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="99.526222"
+       y="93.127144"
+       id="text7416-5"><tspan
+         sodipodi:role="line"
+         x="99.526222"
+         y="93.127144"
+         style="stroke-width:0.264583"
+         id="tspan7418-1">Container Runtime</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.134294"
+       id="rect7237-0-2-3-5-8-4-5"
+       width="38.621307"
+       height="7.0527058"
+       x="53.556759"
+       y="98.254044" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="61.158577"
+       y="103.29553"
+       id="text7416-9"><tspan
+         sodipodi:role="line"
+         x="61.158577"
+         y="103.29553"
+         style="stroke-width:0.264583"
+         id="tspan7418-2">Machine OS</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.134294"
+       id="rect7237-0-2-3-5-8-4-6-8"
+       width="38.621307"
+       height="7.0527058"
+       x="97.790642"
+       y="98.254044" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="105.39246"
+       y="103.29553"
+       id="text7416-5-3"><tspan
+         sodipodi:role="line"
+         x="105.39246"
+         y="103.29553"
+         style="stroke-width:0.264583"
+         id="tspan7418-1-9">Machine OS</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.196003"
+       id="rect7237-02"
+       width="82.990944"
+       height="6.9913683"
+       x="53.587612"
+       y="108.047" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:start;text-anchor:start;stroke-width:0.264583"
+       x="73.948471"
+       y="113.04035"
+       id="text7256-6-4-4-0"><tspan
+         sodipodi:role="line"
+         id="tspan7254-0-0-4-5"
+         x="73.948471"
+         y="113.04035"
+         style="font-size:4.23333px;text-align:start;text-anchor:start;stroke-width:0.264583">Machine Infrastructure</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.227294;stroke-miterlimit:4;stroke-dasharray:0.909177, 0.909177;stroke-dashoffset:0"
+       id="rect7534"
+       width="100.35383"
+       height="32.423222"
+       x="38.022396"
+       y="53.616673" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-82.780037"
+       y="47.029854"
+       id="text7538"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan7536"
+         x="-82.780037"
+         y="47.029854"
+         style="stroke-width:0.264583">Orchestration</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="194.94339mm"
+   height="145.11568mm"
+   viewBox="0 0 194.94338 145.11568"
+   version="1.1"
+   id="svg6674"
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)"
+   sodipodi:docname="virtualization.svg">
+  <defs
+     id="defs6668" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.0338254"
+     inkscape:cx="367.72149"
+     inkscape:cy="326.38115"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:snap-global="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1440"
+     inkscape:window-height="900"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0">
+    <sodipodi:guide
+       position="224.09361,106.47623"
+       orientation="1,0"
+       id="guide7443" />
+    <sodipodi:guide
+       position="199.20605,80.360143"
+       orientation="0,-1"
+       id="guide1096" />
+    <sodipodi:guide
+       position="116.84724,67.754213"
+       orientation="0,-1"
+       id="guide1098" />
+    <sodipodi:guide
+       position="108.40166,138.90178"
+       orientation="0,-1"
+       id="guide1328" />
+    <sodipodi:guide
+       position="-2.5592655,-12.790976"
+       orientation="1,0"
+       id="guide2011" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata6671">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(87.639994,-80.436575)">
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.271854"
+       id="rect7237-0-2-3-5-8-4-54-8-53"
+       width="38.483746"
+       height="29.00453"
+       x="-30.881157"
+       y="80.572502" />
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.195642"
+       id="rect7237-0-2-3-5-8-4-6-5-9-1"
+       width="82.686264"
+       height="6.9913573"
+       x="-30.939238"
+       y="112.91988" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="0.13992991"
+       y="117.507"
+       id="text7416-5-9-6-0"><tspan
+         sodipodi:role="line"
+         x="0.13992991"
+         y="117.507"
+         style="stroke-width:0.264583"
+         id="tspan7418-1-5-0-1">Hypervisor</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.195997"
+       id="rect7237-0-2-3-5-8-4-5-4-4-9"
+       width="82.990952"
+       height="6.9910026"
+       x="-31.244108"
+       y="123.09258" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-11.665617"
+       y="127.67953"
+       id="text7416-9-9-2-5"><tspan
+         sodipodi:role="line"
+         x="-11.665617"
+         y="127.67953"
+         style="stroke-width:0.264583"
+         id="tspan7418-2-1-3-7">Host Operating System</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.196003"
+       id="rect7237-02-4-3-6"
+       width="82.990944"
+       height="6.9913688"
+       x="-31.244093"
+       y="132.85463" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:start;text-anchor:start;stroke-width:0.264583"
+       x="-10.883238"
+       y="137.84799"
+       id="text7256-6-4-4-0-1-7-8"><tspan
+         sodipodi:role="line"
+         id="tspan7254-0-0-4-5-8-0-5"
+         x="-10.883238"
+         y="137.84799"
+         style="font-size:4.23333px;text-align:start;text-anchor:start;stroke-width:0.264583">Machine Infrastructure</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';stroke-width:0.264583"
+       x="-26.124176"
+       y="85.241646"
+       id="text1020-2-0-4"><tspan
+         sodipodi:role="line"
+         id="tspan1018-6-3-7"
+         x="-26.124176"
+         y="85.241646"
+         style="font-size:4.23333px;stroke-width:0.264583">Virtual Machine</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.11019"
+       id="rect7237-0-2-3-5-8-4-6-5-0-8-8-9"
+       width="34.695957"
+       height="5.2853251"
+       x="-28.998583"
+       y="102.06123" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-19.396046"
+       y="105.96652"
+       id="text7416-5-9-2-9-3-6"><tspan
+         sodipodi:role="line"
+         x="-19.396046"
+         y="105.96652"
+         style="font-size:3.52778px;stroke-width:0.264583"
+         id="tspan7418-1-5-1-1-6-6">Guest OS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';stroke-width:0.264583"
+       x="-7.8646555"
+       y="147.10843"
+       id="text1073-0-6"><tspan
+         sodipodi:role="line"
+         id="tspan1071-4-6"
+         x="-7.8646555"
+         y="147.10843"
+         style="font-weight:bold;font-size:4.9389px;stroke-width:0.264583">Virtual Machine</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.11019"
+       id="rect7237-0-2-3-5-8-4-6-5-0-8-8-9-7"
+       width="34.695957"
+       height="5.2853251"
+       x="-28.833044"
+       y="86.567078" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-20.031467"
+       y="90.107185"
+       id="text7416-5-9-2-9-3-6-6"><tspan
+         sodipodi:role="line"
+         x="-20.031467"
+         y="90.107185"
+         style="font-size:3.52777px;stroke-width:0.264583"
+         id="tspan7418-1-5-1-1-6-6-7">Application</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.11019"
+       id="rect7237-0-2-3-5-8-4-6-5-0-8-8-9-1"
+       width="34.695957"
+       height="5.2853251"
+       x="-28.833044"
+       y="94.244873" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-18.878225"
+       y="98.121735"
+       id="text7416-5-9-2-9-3-6-4"><tspan
+         sodipodi:role="line"
+         x="-18.878225"
+         y="98.121735"
+         style="font-size:3.52777px;stroke-width:0.264583"
+         id="tspan7418-1-5-1-1-6-6-8">bins / libs</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.271854"
+       id="rect7237-0-2-3-5-8-4-54-8-53-6"
+       width="38.483746"
+       height="29.00453"
+       x="13.036491"
+       y="80.593788" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';stroke-width:0.264583"
+       x="17.793472"
+       y="85.262932"
+       id="text1020-2-0-4-8"><tspan
+         sodipodi:role="line"
+         id="tspan1018-6-3-7-2"
+         x="17.793472"
+         y="85.262932"
+         style="font-size:4.23333px;stroke-width:0.264583">Virtual Machine</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.11019"
+       id="rect7237-0-2-3-5-8-4-6-5-0-8-8-9-3"
+       width="34.695957"
+       height="5.2853251"
+       x="14.919064"
+       y="102.08252" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="24.521603"
+       y="105.98781"
+       id="text7416-5-9-2-9-3-6-9"><tspan
+         sodipodi:role="line"
+         x="24.521603"
+         y="105.98781"
+         style="font-size:3.52777px;stroke-width:0.264583"
+         id="tspan7418-1-5-1-1-6-6-0">Guest OS</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.11019"
+       id="rect7237-0-2-3-5-8-4-6-5-0-8-8-9-7-3"
+       width="34.695957"
+       height="5.2853251"
+       x="15.084602"
+       y="86.588364" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="23.886177"
+       y="90.128471"
+       id="text7416-5-9-2-9-3-6-6-8"><tspan
+         sodipodi:role="line"
+         x="23.886177"
+         y="90.128471"
+         style="font-size:3.52777px;stroke-width:0.264583"
+         id="tspan7418-1-5-1-1-6-6-7-3">Application</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.11019"
+       id="rect7237-0-2-3-5-8-4-6-5-0-8-8-9-1-1"
+       width="34.695957"
+       height="5.2853251"
+       x="15.084602"
+       y="94.266159" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="25.039421"
+       y="98.143021"
+       id="text7416-5-9-2-9-3-6-4-0"><tspan
+         sodipodi:role="line"
+         x="25.039421"
+         y="98.143021"
+         style="font-size:3.52777px;stroke-width:0.264583"
+         id="tspan7418-1-5-1-1-6-6-8-0">bins / libs</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.316089"
+       id="rect7237-0-2-3-5-8-4-54"
+       width="38.43951"
+       height="39.256428"
+       x="-87.28447"
+       y="157.99895" />
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.195997"
+       id="rect7237-0-2-3-5-8-4-5-4"
+       width="82.990952"
+       height="6.9910026"
+       x="-87.541992"
+       y="200.49695" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-67.963509"
+       y="205.08386"
+       id="text7416-9-9"><tspan
+         sodipodi:role="line"
+         x="-67.963509"
+         y="205.08386"
+         style="stroke-width:0.264583"
+         id="tspan7418-2-1">Host Operating System</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.196003"
+       id="rect7237-02-4"
+       width="82.990944"
+       height="6.9913688"
+       x="-87.541992"
+       y="210.25905" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:start;text-anchor:start;stroke-width:0.264583"
+       x="-67.181129"
+       y="215.25241"
+       id="text7256-6-4-4-0-1"><tspan
+         sodipodi:role="line"
+         id="tspan7254-0-0-4-5-8"
+         x="-67.181129"
+         y="215.25241"
+         style="font-size:4.23333px;text-align:start;text-anchor:start;stroke-width:0.264583">Machine Infrastructure</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';stroke-width:0.264583"
+       x="-77.383003"
+       y="162.64597"
+       id="text1020-2"><tspan
+         sodipodi:role="line"
+         id="tspan1018-6"
+         x="-77.383003"
+         y="162.64597"
+         style="font-size:4.23333px;stroke-width:0.264583">Container</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.127318"
+       id="rect7237-0-2-3-5-8-4-6-5-0-8"
+       width="34.678829"
+       height="7.0596819"
+       x="-85.287918"
+       y="188.26582" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-76.820305"
+       y="193.2767"
+       id="text7416-5-9-2-9"><tspan
+         sodipodi:role="line"
+         x="-76.820305"
+         y="193.2767"
+         style="stroke-width:0.264583"
+         id="tspan7418-1-5-1-1">bins / libs</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';stroke-width:0.264583"
+       x="-86.551208"
+       y="224.51286"
+       id="text1073"><tspan
+         sodipodi:role="line"
+         id="tspan1071"
+         x="-86.551208"
+         y="224.51286"
+         style="font-weight:bold;font-size:4.93889px;stroke-width:0.264583">Operation System Level Container</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.2236"
+       id="rect7237-0-2-3-5-8-4-6-5-0-3"
+       width="34.582546"
+       height="21.835192"
+       x="-85.239777"
+       y="164.41978" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-78.204201"
+       y="176.41432"
+       id="text7416-5-9-2-3"><tspan
+         sodipodi:role="line"
+         x="-78.204201"
+         y="176.41432"
+         style="stroke-width:0.264583"
+         id="tspan7418-1-5-1-8">Application</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.316089"
+       id="rect1439"
+       width="38.43951"
+       height="39.256428"
+       x="-87.28447"
+       y="157.99895" />
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.195997"
+       id="rect1447"
+       width="82.990952"
+       height="6.9910026"
+       x="-87.541992"
+       y="200.49695" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-67.963509"
+       y="205.08386"
+       id="text1451"><tspan
+         sodipodi:role="line"
+         x="-67.963509"
+         y="205.08386"
+         style="stroke-width:0.264583"
+         id="tspan1449">Host Operating System</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.196003"
+       id="rect1453"
+       width="82.990944"
+       height="6.9913688"
+       x="-87.541992"
+       y="210.25905" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:start;text-anchor:start;stroke-width:0.264583"
+       x="-67.181129"
+       y="215.25241"
+       id="text1457"><tspan
+         sodipodi:role="line"
+         id="tspan1455"
+         x="-67.181129"
+         y="215.25241"
+         style="font-size:4.23333px;text-align:start;text-anchor:start;stroke-width:0.264583">Machine Infrastructure</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';stroke-width:0.264583"
+       x="-77.383003"
+       y="162.64597"
+       id="text1471"><tspan
+         sodipodi:role="line"
+         id="tspan1469"
+         x="-77.383003"
+         y="162.64597"
+         style="font-size:4.23333px;stroke-width:0.264583">Container</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.127318"
+       id="rect1473"
+       width="34.678829"
+       height="7.0596819"
+       x="-85.287918"
+       y="188.26582" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-76.820305"
+       y="193.2767"
+       id="text1477"><tspan
+         sodipodi:role="line"
+         x="-76.820305"
+         y="193.2767"
+         style="stroke-width:0.264583"
+         id="tspan1475">bins / libs</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';stroke-width:0.264583"
+       x="-86.551208"
+       y="224.51286"
+       id="text1481"><tspan
+         sodipodi:role="line"
+         id="tspan1479"
+         x="-86.551208"
+         y="224.51286"
+         style="font-weight:bold;font-size:4.93889px;stroke-width:0.264583">Operation System Level Container</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.2236"
+       id="rect1483"
+       width="34.582546"
+       height="21.835192"
+       x="-85.239777"
+       y="164.41978" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-78.204201"
+       y="176.41432"
+       id="text1487"><tspan
+         sodipodi:role="line"
+         x="-78.204201"
+         y="176.41432"
+         style="stroke-width:0.264583"
+         id="tspan1485">Application</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.195642"
+       id="rect7237-0-2-3-5-8-4-6-5-9"
+       width="82.686264"
+       height="6.9913573"
+       x="24.345888"
+       y="190.30904" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="49.317932"
+       y="194.89612"
+       id="text7416-5-9-6"><tspan
+         sodipodi:role="line"
+         x="49.317932"
+         y="194.89612"
+         style="stroke-width:0.264583"
+         id="tspan7418-1-5-0">Container Engine</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.195997"
+       id="rect7237-0-2-3-5-8-4-5-4-4"
+       width="82.990952"
+       height="6.9910026"
+       x="24.041018"
+       y="200.48175" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="43.619507"
+       y="205.06866"
+       id="text7416-9-9-2"><tspan
+         sodipodi:role="line"
+         x="43.619507"
+         y="205.06866"
+         style="stroke-width:0.264583"
+         id="tspan7418-2-1-3">Host Operating System</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.196003"
+       id="rect7237-02-4-3"
+       width="82.990944"
+       height="6.9913688"
+       x="24.041033"
+       y="210.24385" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:start;text-anchor:start;stroke-width:0.264583"
+       x="44.401886"
+       y="215.23721"
+       id="text7256-6-4-4-0-1-7"><tspan
+         sodipodi:role="line"
+         id="tspan7254-0-0-4-5-8-0"
+         x="44.401886"
+         y="215.23721"
+         style="font-size:4.23333px;text-align:start;text-anchor:start;stroke-width:0.264583">Machine Infrastructure</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';stroke-width:0.264583"
+       x="32.83197"
+       y="224.49767"
+       id="text1073-0"><tspan
+         sodipodi:role="line"
+         id="tspan1071-4"
+         x="32.83197"
+         y="224.49767"
+         style="font-weight:bold;font-size:4.9389px;stroke-width:0.264583">Application Level Container</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.195642"
+       id="rect1491"
+       width="82.686264"
+       height="6.9913573"
+       x="24.345888"
+       y="190.30904" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="49.317932"
+       y="194.89612"
+       id="text1495"><tspan
+         sodipodi:role="line"
+         x="49.317932"
+         y="194.89612"
+         style="stroke-width:0.264583"
+         id="tspan1493">Container Engine</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.195997"
+       id="rect1497"
+       width="82.990952"
+       height="6.9910026"
+       x="24.041018"
+       y="200.48175" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="43.619507"
+       y="205.06866"
+       id="text1501"><tspan
+         sodipodi:role="line"
+         x="43.619507"
+         y="205.06866"
+         style="stroke-width:0.264583"
+         id="tspan1499">Host Operating System</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.196003"
+       id="rect1503"
+       width="82.990944"
+       height="6.9913688"
+       x="24.041033"
+       y="210.24385" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:start;text-anchor:start;stroke-width:0.264583"
+       x="44.401886"
+       y="215.23721"
+       id="text1507"><tspan
+         sodipodi:role="line"
+         id="tspan1505"
+         x="44.401886"
+         y="215.23721"
+         style="font-size:4.23333px;text-align:start;text-anchor:start;stroke-width:0.264583">Machine Infrastructure</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';stroke-width:0.264583"
+       x="32.83197"
+       y="224.49767"
+       id="text1521"><tspan
+         sodipodi:role="line"
+         id="tspan1519"
+         x="32.83197"
+         y="224.49767"
+         style="font-weight:bold;font-size:4.9389px;stroke-width:0.264583">Application Level Container</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.271854"
+       id="rect1547"
+       width="38.483746"
+       height="29.00453"
+       x="-30.881157"
+       y="80.572502" />
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.195642"
+       id="rect1549"
+       width="82.686264"
+       height="6.9913573"
+       x="-30.939238"
+       y="112.91988" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="0.13992991"
+       y="117.507"
+       id="text1553"><tspan
+         sodipodi:role="line"
+         x="0.13992991"
+         y="117.507"
+         style="stroke-width:0.264583"
+         id="tspan1551">Hypervisor</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.195997"
+       id="rect1555"
+       width="82.990952"
+       height="6.9910026"
+       x="-31.244108"
+       y="123.09258" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-11.665617"
+       y="127.67953"
+       id="text1559"><tspan
+         sodipodi:role="line"
+         x="-11.665617"
+         y="127.67953"
+         style="stroke-width:0.264583"
+         id="tspan1557">Host Operating System</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.196003"
+       id="rect1561"
+       width="82.990944"
+       height="6.9913688"
+       x="-31.244093"
+       y="132.85463" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:start;text-anchor:start;stroke-width:0.264583"
+       x="-10.883238"
+       y="137.84799"
+       id="text1565"><tspan
+         sodipodi:role="line"
+         id="tspan1563"
+         x="-10.883238"
+         y="137.84799"
+         style="font-size:4.23333px;text-align:start;text-anchor:start;stroke-width:0.264583">Machine Infrastructure</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';stroke-width:0.264583"
+       x="-26.124176"
+       y="85.241646"
+       id="text1569"><tspan
+         sodipodi:role="line"
+         id="tspan1567"
+         x="-26.124176"
+         y="85.241646"
+         style="font-size:4.23333px;stroke-width:0.264583">Virtual Machine</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.11019"
+       id="rect1571"
+       width="34.695957"
+       height="5.2853251"
+       x="-28.998583"
+       y="102.06123" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-19.396046"
+       y="105.96652"
+       id="text1575"><tspan
+         sodipodi:role="line"
+         x="-19.396046"
+         y="105.96652"
+         style="font-size:3.52778px;stroke-width:0.264583"
+         id="tspan1573">Guest OS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';stroke-width:0.264583"
+       x="-7.8646555"
+       y="147.10843"
+       id="text1579"><tspan
+         sodipodi:role="line"
+         id="tspan1577"
+         x="-7.8646555"
+         y="147.10843"
+         style="font-weight:bold;font-size:4.9389px;stroke-width:0.264583">Virtual Machine</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.11019"
+       id="rect1581"
+       width="34.695957"
+       height="5.2853251"
+       x="-28.833044"
+       y="86.567078" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-20.031467"
+       y="90.107185"
+       id="text1585"><tspan
+         sodipodi:role="line"
+         x="-20.031467"
+         y="90.107185"
+         style="font-size:3.52777px;stroke-width:0.264583"
+         id="tspan1583">Application</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.11019"
+       id="rect1587"
+       width="34.695957"
+       height="5.2853251"
+       x="-28.833044"
+       y="94.244873" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-18.878225"
+       y="98.121735"
+       id="text1591"><tspan
+         sodipodi:role="line"
+         x="-18.878225"
+         y="98.121735"
+         style="font-size:3.52777px;stroke-width:0.264583"
+         id="tspan1589">bins / libs</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.271854"
+       id="rect1593"
+       width="38.483746"
+       height="29.00453"
+       x="13.036491"
+       y="80.593788" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';stroke-width:0.264583"
+       x="17.793472"
+       y="85.262932"
+       id="text1597"><tspan
+         sodipodi:role="line"
+         id="tspan1595"
+         x="17.793472"
+         y="85.262932"
+         style="font-size:4.23333px;stroke-width:0.264583">Virtual Machine</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.11019"
+       id="rect1599"
+       width="34.695957"
+       height="5.2853251"
+       x="14.919064"
+       y="102.08252" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="24.521603"
+       y="105.98781"
+       id="text1603"><tspan
+         sodipodi:role="line"
+         x="24.521603"
+         y="105.98781"
+         style="font-size:3.52777px;stroke-width:0.264583"
+         id="tspan1601">Guest OS</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.11019"
+       id="rect1605"
+       width="34.695957"
+       height="5.2853251"
+       x="15.084602"
+       y="86.588364" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="23.886177"
+       y="90.128471"
+       id="text1609"><tspan
+         sodipodi:role="line"
+         x="23.886177"
+         y="90.128471"
+         style="font-size:3.52777px;stroke-width:0.264583"
+         id="tspan1607">Application</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.11019"
+       id="rect1611"
+       width="34.695957"
+       height="5.2853251"
+       x="15.084602"
+       y="94.266159" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="25.039421"
+       y="98.143021"
+       id="text1615"><tspan
+         sodipodi:role="line"
+         x="25.039421"
+         y="98.143021"
+         style="font-size:3.52777px;stroke-width:0.264583"
+         id="tspan1613">bins / libs</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.272648"
+       id="rect7237-0-2-3-8-9"
+       width="38.482956"
+       height="29.174309"
+       x="24.408825"
+       y="157.98296" />
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.219024"
+       id="rect7237-0-2-3-5-8-4-6-5-0-6"
+       width="34.587124"
+       height="20.947699"
+       x="26.438"
+       y="164.479" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="33.475864"
+       y="176.02979"
+       id="text7416-5-9-2-0"><tspan
+         sodipodi:role="line"
+         x="33.475864"
+         y="176.02979"
+         style="stroke-width:0.264583"
+         id="tspan7418-1-5-1-12">Application</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';stroke-width:0.264583"
+       x="34.332012"
+       y="162.41603"
+       id="text1020-3"><tspan
+         sodipodi:role="line"
+         id="tspan1018-2"
+         x="34.332012"
+         y="162.41603"
+         style="font-size:4.23333px;stroke-width:0.264583">Container</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.272648"
+       id="rect1437-1"
+       width="38.482956"
+       height="29.174309"
+       x="24.408825"
+       y="157.98296" />
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.219024"
+       id="rect1459-1"
+       width="34.587124"
+       height="20.947699"
+       x="26.438"
+       y="164.479" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="33.475864"
+       y="176.02979"
+       id="text1463-0"><tspan
+         sodipodi:role="line"
+         x="33.475864"
+         y="176.02979"
+         style="stroke-width:0.264583"
+         id="tspan1461-1">Application</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';stroke-width:0.264583"
+       x="34.332012"
+       y="162.41603"
+       id="text1467-3"><tspan
+         sodipodi:role="line"
+         id="tspan1465-8"
+         x="34.332012"
+         y="162.41603"
+         style="font-size:4.23333px;stroke-width:0.264583">Container</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.272648"
+       id="rect7237-0-2-3-8-0"
+       width="38.482956"
+       height="29.174309"
+       x="68.684113"
+       y="157.98297" />
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.219024"
+       id="rect7237-0-2-3-5-8-4-6-5-0-0"
+       width="34.587124"
+       height="20.947699"
+       x="70.713287"
+       y="164.47902" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="77.751152"
+       y="176.0298"
+       id="text7416-5-9-2-94"><tspan
+         sodipodi:role="line"
+         x="77.751152"
+         y="176.0298"
+         style="stroke-width:0.264583"
+         id="tspan7418-1-5-1-2">Application</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';stroke-width:0.264583"
+       x="78.6073"
+       y="162.41605"
+       id="text1020-4"><tspan
+         sodipodi:role="line"
+         id="tspan1018-0"
+         x="78.6073"
+         y="162.41605"
+         style="font-size:4.23333px;stroke-width:0.264583">Container</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.272648"
+       id="rect1437-2"
+       width="38.482956"
+       height="29.174309"
+       x="68.684113"
+       y="157.98297" />
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.219024"
+       id="rect1459-9"
+       width="34.587124"
+       height="20.947699"
+       x="70.713287"
+       y="164.47902" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="77.751152"
+       y="176.0298"
+       id="text1463-7"><tspan
+         sodipodi:role="line"
+         x="77.751152"
+         y="176.0298"
+         style="stroke-width:0.264583"
+         id="tspan1461-9">Application</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';stroke-width:0.264583"
+       x="78.6073"
+       y="162.41605"
+       id="text1467-2"><tspan
+         sodipodi:role="line"
+         id="tspan1465-2"
+         x="78.6073"
+         y="162.41605"
+         style="font-size:4.23333px;stroke-width:0.264583">Container</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.31609"
+       id="rect7237-0-2-3-5-8-4-54-3"
+       width="38.43951"
+       height="39.256432"
+       x="-43.134048"
+       y="158.06042" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';stroke-width:0.264583"
+       x="-33.232582"
+       y="162.70744"
+       id="text1020-2-2"><tspan
+         sodipodi:role="line"
+         id="tspan1018-6-1"
+         x="-33.232582"
+         y="162.70744"
+         style="font-size:4.23333px;stroke-width:0.264583">Container</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.127318"
+       id="rect7237-0-2-3-5-8-4-6-5-0-8-6"
+       width="34.678829"
+       height="7.0596819"
+       x="-41.137497"
+       y="188.32732" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-32.669884"
+       y="193.3382"
+       id="text7416-5-9-2-9-8"><tspan
+         sodipodi:role="line"
+         x="-32.669884"
+         y="193.3382"
+         style="stroke-width:0.264583"
+         id="tspan7418-1-5-1-1-1">bins / libs</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.2236"
+       id="rect7237-0-2-3-5-8-4-6-5-0-3-0"
+       width="34.582546"
+       height="21.835192"
+       x="-41.089355"
+       y="164.48126" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-34.05378"
+       y="176.4758"
+       id="text7416-5-9-2-3-6"><tspan
+         sodipodi:role="line"
+         x="-34.05378"
+         y="176.4758"
+         style="stroke-width:0.264583"
+         id="tspan7418-1-5-1-8-0">Application</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.31609"
+       id="rect1439-4"
+       width="38.43951"
+       height="39.256432"
+       x="-43.134048"
+       y="158.06042" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';stroke-width:0.264583"
+       x="-33.232582"
+       y="162.70744"
+       id="text1471-9"><tspan
+         sodipodi:role="line"
+         id="tspan1469-9"
+         x="-33.232582"
+         y="162.70744"
+         style="font-size:4.23333px;stroke-width:0.264583">Container</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.127318"
+       id="rect1473-4"
+       width="34.678829"
+       height="7.0596819"
+       x="-41.137497"
+       y="188.32732" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-32.669884"
+       y="193.3382"
+       id="text1477-5"><tspan
+         sodipodi:role="line"
+         x="-32.669884"
+         y="193.3382"
+         style="stroke-width:0.264583"
+         id="tspan1475-0">bins / libs</tspan></text>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.2236"
+       id="rect1483-6"
+       width="34.582546"
+       height="21.835192"
+       x="-41.089355"
+       y="164.48126" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;stroke-width:0.264583"
+       x="-34.05378"
+       y="176.4758"
+       id="text1487-9"><tspan
+         sodipodi:role="line"
+         x="-34.05378"
+         y="176.4758"
+         style="stroke-width:0.264583"
+         id="tspan1485-0">Application</tspan></text>
+  </g>
+</svg>

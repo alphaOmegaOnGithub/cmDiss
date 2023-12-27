@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+
+\addbibresource{sample.bib} %Imports bibliography file
+
+\title{Bibliography management: \texttt{biblatex} package}
+\author{Share\LaTeX}
+\date{ }
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Background}
+‘Cloud’ has become a synonym for “faster, flexible, scalable and last but not least cost efficient”. Many decision makers in mayor Enterprises are therefore re-thinking how to restructure their IT such to cut cost and increase productivity. One key area that must be looked at are the outdated, very often inflexible and slow resource allocation processes. Over the years these homegrown IT-Processes have become a major show stopper when it comes to a more dynamic and flexible resource allocation. The established deployment processes no longer satisfy demand in an ‘Everything as a Service’ (EaaS) world. The way out of this dilemma is the adoption of ‘Cloud’-technology. The latter has industrialized the delivery of managed services by employing a new consumption model and thus showing a clear way out into a more efficient IT-Infrastructure. 
+
+-------------------------------------------
+\section{Goals}
+With this master thesis we want to investigate how the architecture design of legacy ECM Systems can be evolved such for being able to exploit todays cloud technologies in a non-disruptive way and thus overcoming current issues.  We believe the benefits for ECM from embracing the 'Cloud': the exploitation of the economies-of-scale, an inherent support for multi-tenancy, and the ubiquity of the service offering in an increasingly secure and trusted environment. 
+
+\section{Expectations}
+Focus of this master thesis is to analyze the legacy architecture of ECM Systems, describe the shortcomings of the current design component by component and then develop a strategy to change, enhance and evolve the design in a way that allows the integration with current and future 'cloud technology’ in a non-disruptive way.  
+
+The work should first analyze the current system architecture then introduce design aspects of dynamic deployment and automated operations and finally demonstrate the feasibility that legacy ECM systems can take advantage of cloud technology like: 
+\begin{list}
+    \item[Continuous delivery & Integration 
+     Virtualization, and Containerization 
+     Automated Administration & Operations  
+     Cloud enabled Monitoring & Metering] 
+\end{list}
+
+In the second more practical part of this master work, a prototype ECM service should be developed, implemented and deployed into a cloud environment. As result a qualitative and quantitative evidence is to be shown of the optimized efficiency and minimize resource consumptions compared to its legacy counterpart.
+
+ 
+\section{Approach:} 
+
+The detailed tasks are:
+\subsection{Part I} 
+o	Familiarize yourself with the current ECM system architecture design and its context
+o	Perform a gap analysis relative to the new business requirements 
+o	Document the design problems derived and think possible solutions.       
+o	Research and classify current and future cloud technology. 
+This means you should analyze and compare the different cloud technologies and / or products available on the market, company laboratories and research institutions.
+Here are examples of cloud products /technology: 
+Openstack, IBM Red Hat / Openshift, Podman / Kubernetes, Puppet, AWS CloudFormation, Ansible, Chef, Terraform, Google Cloud Deployment Manager, Microsoft Azure Automation, Foreman, VMware vCenter Configuration Manager (VCM), Cisco Intelligent Automation for Cloud
+o	Create a list of all possible candidates document their cloud technology and their key capabilities, detail the pro and cons. 	  
+o	Using all the above, sketch out the design changes required to satisfy function and non-functional requirements
+o	Create a concept design of  the new and revised system architecture, outline the operational extensions required for being able to integrate with the cloud environment(s) chosen
+o	Consolidate the documentation so far and present your intermediate results
+
+\subsection{Part II}
+o	Implement the prototype ECM service chosen
+o	Verify and validate that deployment topology works as expected
+o	Consider the integration points challenges and benefits
+o	Monitor consumption and the operations of new IT-Infrastructure. 
+Measure the efficiency and consumption figures and estimate the benefits 
+gained with the new approach. 
+o	Consolidate the documentation so far and present your intermediate results
+•\subsection{Part III}
+o	Evaluate the results and consolidate documentation so far  
+o	Explain the new 'cloud' delivery model', the enhanced service offering and the benefits 
+to the own business units inside the company and customers outside.  
+o	Final presentation and explanation if the final results
+
+
+Using \texttt{biblatex} you can display bibliography divided into sections, depending of citation type. 
+Let's cite! my paper 
+  \cite{DBLP:conf/gi/MegaL14} and 
+  \cite{DBLP:conf/btw/WaizeneggerSM13} and 
+  \textit{The \LaTeX\ Companion} book 
+  \cite{DBLP:conf/iesa/RitterMM12},and
+  \cite{DBLP:conf/adbis/WagnerKMMR08}, 
+  \textit{The adbis and idc work} (CTAN) 
+  \cite{DBLP:conf/idc/WagnerKMMR08} are \LaTeX\ related items;  
+  \cite{DBLP:conf/btw/MegaWM05} are dedicated to ECM. 
+  \cite{DBLP:journals/ibmrd/MegaWLSB14}myarticle
+
+\medskip
+
+\printbibliography[
+heading=bibintoc,
+title={myWhole bibliography}
+] %Prints the entire bibliography with the titel "Whole bibliography"
+
+\clearpage
+
+%Filters bibliography
+\printbibliography[heading=subbibintoc,type=article,title={Articles only}]
+\printbibliography[type=book,title={Books only}]
+\printbibliography[keyword={physics},title={Physics-related only}]
+\printbibliography[keyword={latex},title={\LaTeX-related only}]
+
+
+\end{document}

@@ -1,0 +1,457 @@
+\label{chap:prototype}
+In this chapter describes the prototypical implementation of the changes to the approach by Shao~\cite{shao} from the previous chapter to allow the operation within a Kubernetes cluster.
+
+\section{Infrastructure}
+The following prototype was developed, deployed and tested on the infrastructure of the Institute of Parallel and Distributed Systems at the University Stuttgart.
+It consists of a Open Stack instance which manages the virtual machines running \textit{CentOS 8}\footnote{https://www.centos.org} that are used throughout this thesis.
+To further simplify the development process and minimize the effort of setting up and managing a set of virtual machines as Kubernetes nodes this thesis relies on the KiND project.
+
+\subsection{Kubernetes in Docker (KiND)}
+The KiND Project uses multiple Docker containers to create a virtual Kubernetes cluster with multiple nodes.
+It was created by the Kubernetes authors to enable a fast and straightforward way to test and verify cluster configurations on the local machine of a developer.
+A KiND cluster consists of the following Docker images:
+\begin{itemize}
+    \item[]{\textbf{Base Image}\\
+    This Image is based on Ubuntu and contains only the necessary dependencies for running nested containers, systemd and Kubernetes.
+    Additionally it contains a custom entrypoint that allows to execute configurations before the container becomes available.}
+    \item[]{\textbf{Node Image}\\
+    This image is an extension of the Base Image and contains the tools required to operate and manage Kubernetes resources within a cluster.
+    KiND aims to leverage existing tooling for Kubernetes to create a familiar environment for developers.}
+\end{itemize}
+Each node of a cluster runs its own Docker container which is identified through a Docker object label containing the cluster name and node id.
+A KiND cluster consists of at least one control plane and one or many worker nodes.
+The control plane handles incoming network traffic, storage mounts on the host machine and additional initial configurations of the cluster.
+A worker node is equivalent to a compute node in a regular Kubernetes cluster~\cite{kind, KUB3}.
+
+\subsection{Configuration of the Used Cluster}
+To allow the external world to communicate with the applications inside a KiND cluster it is necessary to include a set \textit{extraPortMappings} in the cluster configuration file shown in~\cref{lst:cluster_config}.
+\begin{Listing}
+\begin{lstlisting}
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: ecm
+nodes:
+  - role: control-plane
+    extraPortMappings:
+      - containerPort: 30043
+        hostPort: 9043
+      - containerPort: 30044
+        hostPort: 9044
+      - containerPort: 30080
+        hostPort: 9080
+      - containerPort: 30081
+        hostPort: 9081
+      - containerPort: 30443
+        hostPort: 9443
+      - containerPort: 30444
+        hostPort: 9444
+  - role: worker
+  - role: worker
+  \end{lstlisting}
+  \caption{KiND Cluster Configuration File}
+  \label{lst:cluster_config}
+\end{Listing}
+Since Kubernetes only allows external ports to be in between $30000$ and $32767$ as well as the fact that KiND runs in Docker a workaround was needed to expose the expected ports on the host machine.
+The workaround consists of \textit{nodePort} components inside the Kubernetes cluster that expose the ports of the application inside a pod which are then connected to the \textit{hostPort} of the \textit{controlPlane} container on the host server.
+The applied workaround of the port mappings is shown in~\cref{fig:port_mapping}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{graphics/port_mapping.svg}
+    \caption{Workaround to Enable Incoming Traffic to the KiND Cluster}
+    \label{fig:port_mapping}
+\end{figure}
+
+\section{Kubernetes Components}
+To successfully run the aspired ECM system topology presented in~\cref{chap:concept} within a Kubernetes cluster the following components need to be utilized~\cite{KUB,KUB2,KUB3,KUB4}:
+\begin{itemize}
+    \item[]{\textbf{Namespaces}\\
+    To enable the maintenance of multiple virtual clusters on a single physical cluster the concept of \textit{Namepaces} was introduced.
+    It is especially helpful for managing the distribution of computing resource in large environments with multiple teams and projects.
+    Thereby they allow the implementation of access control and resource quotas.
+    Resource names must be unique within a \textit{Namespace} but not across different \textit{Namespaces}.
+    Every cluster generates its own DNS space which is called \textit{cluster.local} and by placing an \textit{Service}-Object in a \textit{Namespace} the resulting fully qualified domain name (FQDN) will be \texttt{<object-name>.<namespace>.svc.cluster.local}.
+    A \textit{Pod} inside the same \textit{Namespace} can connect to the \textit{Service} via its \texttt{<object-name>} but a \textit{Pod} from a different \textit{Namespace} needs the FQDN to establish a connection.
+    }
+    \item[]{\textbf{Pod}\\
+    In Kubernetes a \textit{Pod} is the smallest unit that can be deployed and is a runtime isolation for a set of containers.
+    The grouped containers are always deployed as a collective on the same host machine and the \textit{Scheduling Layer} strives to find a placement in the cluster which satisfies all constraints imposed by the incorporated containers.
+    This pooling allows a fast exchange of information between each other by leveraging the file system, networking or inter process communication of the host.
+    Additionally every \textit{Pod} has its own IP-address and thus a port range which is shared among all enclosed containers.
+    Therefore it should be payed attention to port allocation at configuration time to prevent port conflicts.
+    \textit{Pods} are designed to contain only a single instance of an application hence the \textit{Pod} should be replicated for scaling.
+    Another key concept of Kubernetes is the the ephemerality of \textit{Pods} in their life cycle.
+    That means that whenever a \textit{Pod} encounters an error the \textit{Pod} is not diagnosed and repaired but rather terminated and a new \textit{Pod} with identical properties is started.
+    The same happens when a computation node fails: the \textit{Pods} on the node in question are not saved and moved to an available node but forgotten and a new set of \textit{Pods} is created.
+    Even in the case of lightweight configuration changes the modification will not be passed to a running container instead the active \textit{Pod} will be terminated and a new one containing the changes will be spun up.
+    To know if a container inside a \textit{Pod} is working properly Kubernetes runs a set of diagnostic functions on a container:
+    \begin{itemize}
+        \item[] {\textbf{ExecAction:} Performs a specified command inside the container and succeeds if the command terminates without an error.}
+        \item[] {\textbf{TCPSocketAction:} Tries to open a TCP socket on a specified port of the \textit{Pods} IP-address and succeeds if a socket is opened.}
+        \item[] {\textbf{HTTPGetAction:} Sends a HTTP \texttt{GET} request to a specified port and route on the \textit{Pods} IP-address and succeeds if the status code of the response is between \texttt{200} and \texttt{400}.}
+    \end{itemize}
+    Kubernetes provides the previously introduced functions to monitor the following conditions a \textit{Pod} could encounter during its life cycle:
+    \begin{itemize}
+        \item[] {\textbf{Startup:} Monitors if the application inside a container successfully launched during the start up phase of the \textit{Pod}.
+        The following conditions are only evaluated if the Startup was successful.
+        It is especially helpful for large and complex applications that need a certain time span to become available for service.
+        }
+        \item[] {\textbf{Readiness:} Evaluates whether the container is able to respond to requests.
+        If the probe fails Kubernetes prevents incoming traffic to be passed to the \textit{Pod} by removing its IP-address from the \textit{Endpoint} objects of all \textit{Services} that reference the \textit{Pod}.
+        }
+        \item[] {\textbf{Liveness:} Continuously checks whether a container is in a functional state to process incoming requests.
+        This probe should be used if an application has a strong dependency on a external back-end service to prevent information loss.
+        }
+    \end{itemize}
+    If the \textit{Startup} and \textit{Liveness} probes fail Kubernetes autonomously terminates the \textit{Pod} and launches a new one.
+    The termination happens gracefully since \textit{Pods} are distributed processes running distributed within a cluster.
+    Abruptly killing processes without a cleanup phase can leave corrupted data and open database connections behind.
+    To prevent those undesirable residuals, clean up commands can be passed through a specified \textit{postStop} hook.
+    It is executed after the termination signal reached the \textit{Pod} and before the \texttt{TERM} signal is passed to the process with the id $1$ inside each container.
+    }
+    \item[]{\textbf{ReplicaSets}\\
+    A \textit{ReplicaSet} takes care of maintaining a specified number of identical active \textit{Pods} at any given point in time.
+    It contains a selector that identifies which \textit{Pods} should be monitored, a count of how many \textit{Pods} should be running simultaneously and a template which describes the properties newly generated \textit{Pods} should comply with.
+    It is considered a best practice to only interact directly with \textit{ReplicaSets} when dealing with complex deployment scenarios.
+    In regular circumstances it should be sufficient to utilize \textit{Deployments} to manage the deployed \textit{Pods}.
+    }
+    \item[]{\textbf{Deployments}\\
+    The update and start of applications inside a cluster in a declarative way is performed through \textit{Deployment} configuration files.
+    They serve as a blueprint of the service an application should provide.
+    A \textit{Deployment} contains the desired state of an application in regard to the number of pods, which image should be used for the containers inside the \textit{Pods}, the assignment of network ports and information about how to perform rolling updates.
+    To accomplish a successful rolling update by deploying a new version of the image of an application the updated \textit{Deployments} file is resubmitted to the Kubernetes API server.
+    It detects a new desired state in the cluster and creates a new \textit{ReplicaSet} for the \textit{Pods} containing the updated image.
+    So now the cluster contains a new and an old \textit{ReplicaSet} and each time a new \textit{Pod} with the updated image is launched a running \textit{Pod} containing the deprecated image is terminated.
+    This procedure allows a smooth update process with minimized downtime.
+    After performing a rolling update by default the previous $10$ outdated \textit{ReplicaSets} containing their whole configuration are retained in the cluster without managing active \textit{Pods}.
+    Hence a rollback is essentially a rolling update the other way around to a desired previous version of the application.
+    Additionally the prior described \textit{Startup-}, \textit{Readiness} and \textit{Liveness}-Probes need to be specified within the \textit{Deployments} files.
+    \cref{fig:kub_components} illustrates that \textit{Deployments} are controlling \textit{ReplicaSets}, and \textit{ReplicaSets} are managing \textit{Pods}.
+    }
+    \item[]{\textbf{PersistentVolumes}\\
+    \textit{Pods} in a cluster are intended to be stateless but sometimes external storage needs to be mapped onto the cluster to provide data and storage capacity for the running applications.
+    This component was introduced to abstract the usage of storage from its provision since managing storage differs from managing computing resources. 
+    \textit{PersistentVolumes} differ in life cycle from \textit{Pods} and contain the information to use NFS or storage options provided by cloud vendors.
+    They come in two different forms:
+    \begin{itemize}
+        \item[] {\textbf{Static: }A fixed set of \textit{PersistentVolumes} is manually created at configuration time and can be consumed by applications within the cluster.}
+        \item[] {\textbf{Dynamic: }Kubernetes autonomously allocates \textit{PeristentVolumes} at run time based on a \textit{StorageClass} defined during configuration time.
+        This happens if and only if a matching \textit{PersistentVolumeClaim} exists.
+        By defining the \textit{StorageClass} as an empty string in a \textit{PersistentVolumeClaim} the dynamic provision is disabled.}
+    \end{itemize}
+    }
+    \item[]{\textbf{Persistent Volume Claim}\\
+    The \textit{Persistent Volume Claim} authorizes the applications inside a \textit{Pod} to access the specified \textit{PersistentVolume}.
+    The configuration file contains information about the needed storage capacity, access mode, \textit{StorageClass} etc.
+    It gets bound to a \textit{PeristentVolume} by Kubernetes on a one-on-one basis as soon as the specified conditions are satisfied.
+    Otherwise the claim will remain unbound until new resources are added to the cluster or already utilized are freed.
+    Depending on the storage provider a \textit{PersistentVolumeClaim} is able to consume storage with different access modes:
+    \begin{itemize}
+        \item[] {\textbf{ReadWriteOnce:} One node can exclusively write on this volume.}
+        \item[] {\textbf{ReadOnlyMany:} Many nodes can read jointly from this volume.}
+        \item[] {\textbf{ReadWriteMany:} Many nodes can read from as well as write to this volume.}
+    \end{itemize}
+    Network File Storage supports all previously discussed access modes.
+    }
+    \item[]{\textbf{Storage Classes}\\
+    This component allows to specify classes of provided storage which may differ in the enforced policies by the storage service administration like quality-of-service, backup etc.
+    }
+    \item[]{\textbf{Service}\\
+    Because of the dynamic nature of scaling and locating \textit{Pods} throughout a Kubernetes cluster it is not feasible to use the IP-address of a \textit{Pod} to communicate with the applications it contains.
+    \textit{Services} were introduced to provide a stable and reliable networking interface for a set of ephemeral \textit{Pods}.
+    It exposes a defined host name and ports that are immutable at run time.
+    \textit{Pods} and \textit{Services} have a one-to-one correspondence and are mapped through the \textit{app} selector label.
+    By omitting the selector label the corresponding \textit{Service} won't create an \textit{Endpoint} object.
+    This is useful to incorporate applications that operate on an external host like database applications.
+    }
+    \item[]{\textbf{Nodeport}\\
+    In Kubernetes the \textit{Pods} within the cluster are not reachable from the outside.
+    This component is a special type of \textit{Service} which allows to reach the internal IP-space of the cluster from external applications.
+    Kubernetes either autonomously assigns an access port or applies a specified port in the range of $30000$ and $32767$.
+    \textit{Nodeports} are not able to manage incoming traffic like a \textit{Load Balancer} component and should therefore not be used in production systems.
+    Since this thesis aims to investigate whether ECM systems can be managed by Kubernetes at all the aspect of load balancing is out of scope but is considered in the companion master thesis~\cite{pascal2021}.
+    }
+    \item[]{\textbf{Endpoints}\\
+    \textit{Endpoints} are dynamic objects that contain all the available \textit{Pods} and their IP-addresses and ports.
+    Before directing traffic to \textit{Pods} the corresponding \textit{Service} queries the \textit{Endpoints} object to get the addresses of currently available \textit{Pods} and then chooses one to direct the request to.
+    }
+\end{itemize}
+
+\cref{fig:kub_components} illustrates the previously presented components and its interactions inside a cluster to maintain its specified desired state.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{graphics/kub_components.svg}
+    \caption{The Interactions of the Components Inside a Kubernetes Cluster~\cite{KUB4}}
+    \label{fig:kub_components}
+\end{figure}
+
+\section{Initially Aspired System Topology}
+\label{sec:init_topo}
+The following~\cref{fig:init_topology} shows the previously presented components and its role to implement a scalable Enterprise Content Management system based on the concept introduced in~\cref{chap:concept}.
+\\
+\\
+The overall System is split in two parts the Kubernetes cluster and a NFS server which holds all the data needed to operate the applications inside the cluster.
+The vertical dashed lines indicate the separation of the individual ECM applications.
+Each application utilizes a \textit{PersistentVolume} with a corresponding \textit{PersistentVolumeClaim} to either load needed application data or read from or write to database files.
+The \textit{Resource Manager} application requires two JDBC connections to the \textit{Object Catalog} and \textit{Data Catalog} as well as an external connection for administration.
+The \textit{Web Client} portal application only requires an internal connection to the \textit{Object Catalog}, an internal connection to the \textit{Resource Manager} and an external to provide user access.
+External connections are implemented through \textit{Nodeports} to enable user interaction.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\textwidth]{graphics/initial_topology.svg}
+    \caption{Initial Topology of the ECM System Inside a Kubernetes Cluster}
+    \label{fig:init_topology}
+\end{figure}
+
+\section{Refactored ECM System Topology}
+The initially aspired system topology described in~\cref{sec:init_topo} turned out to be brittle when put under load.
+During functional tests it was discovered that the topology design required a refactoring as the stateful database service was very unstable and unreliable.
+It could sometimes handle manual queries as well as file uploads and sometimes the databases would crash for no obvious reason.
+Following investigations showed that running DB2 instances on NFS storage was the source of the occurring issues.
+\\
+\\
+To enhance the prototype stability and therefore availability we decided to remove the stateful database services from the cluster and operate it as \textit{Docker} containers on a different host server.
+This decision resulted in removing the \textit{Deployment}, \textit{PersistentVolume} and \textit{PersistentVolumeClaim} components and adding a \textit{Endpoints} component for both the \textit{Object Catalog} and the \textit{Data Catalog}.
+Besides that a new Docker image was created which contains all essential files of the \textit{Resource Manager} and \textit{Web Client} applications such that external file mounts are avoided.
+Hence the \textit{Persistent Volume} and \textit{Persistent Volume Claim} component were removed from the topology.
+The new image incorporates both applications and the startup of the separate systems is enforced through various configurations when starting the corresponding container.
+The following~\cref{fig:improv_topology} illustrates the refactored topology to prevent the previously discussed challenges of the initial implementation.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphics/improved_topology.svg}
+    \caption{Improved Topology of the ECM System Inside a Kubernetes Cluster}
+    \label{fig:improv_topology}
+\end{figure}
+
+\section{Implementation Details of the Kubernetes Components}
+The following section describes the configuration of the components of a Enterprise Content Management system within a Kubernetes cluster.
+It describes the implementation by means of source code with a detailed explanation of the design decisions made.
+
+\subsection{Data Catalog and Object Catalog}
+Because the \textit{Data Catalog} and \textit{Object Catalog} are relocated to an external server outside the cluster they require means to communicate with the applications left inside the cluster.
+To achieve this a \textit{Service} without the app selector and a manually configured \textit{Endpoint} object is necessary.
+Since the configuration files of both components have only minor disparities only the \textit{Data Catalog} configuration is displayed. 
+\begin{itemize}
+    \item[]{\textbf{Service}\\
+    The \textit{Service} configuration file is described in~\cref{lst:service_lsdb_config}.
+    The specified \textit{port} in the \textit{spec} section has to correspond to the port exposed within the cluster whereas the \textit{targetPort} needs to correspond with the port configured in the \textit{Endpoint} object.
+    The \textit{Service} configuration of the \textit{Object Catalog} component is identical except for the \textit{port} and \textit{targetPort} number which is $50001$.
+\begin{Listing}[h]
+\begin{lstlisting}
+kind: Service
+apiVersion: v1
+metadata:
+  name: icm86-ls
+  namespace: ecm
+spec:
+  ports:
+    - port: 50000
+      targetPort: 50000
+\end{lstlisting}
+\caption{Data Catalog Database~\textit{Service} Configuration File}
+\label{lst:service_lsdb_config}
+\end{Listing}
+    }
+    \item[]{\textbf{Endpoint}\\
+    The \textit{Endpoint} configuration file is described in~\cref{lst:endpoint_lsdb_config}.
+    The described \textit{port} corresponds directly to the exposed port of the external data source which is reachable through the specified IP-address.
+    The configuration file of the \textit{Object Catalog} \textit{Endpoint} is identical except for the \textit{port} number which is $50001$
+    
+\begin{Listing}[h]
+\begin{lstlisting}
+kind: Endpoints
+apiVersion: v1
+metadata:
+  name: icm86-ls
+  namespace: ecm
+subsets:
+  - addresses:
+      - ip: 192.168.221.148
+    ports:
+      - port: 50000
+\end{lstlisting}
+\caption{Data Catalog Database~\textit{Endpoint} Configuration File}
+\label{lst:endpoint_lsdb_config}
+\end{Listing}
+    }
+\end{itemize}
+
+\subsection{Resource Manager Application and Content Navigator}
+Since the configuration files for the components of the \textit{Resource Manager} and \textit{Web Client} applications are almost identical just the \textit{Resource Manager} is considered in the following section.
+As displayed in~\cref{fig:improv_topology} both applications depend of the following Kubernetes components:
+\begin{itemize}
+    \item[]{\textbf{Nodeport}\\
+    The \textit{Nodeport} configuration file is described in~\cref{lst:nodeport_config}.
+    Because we want Kubernetes to take as much work from our hands as possible the \textit{Nodeport} configurations of components inside the cluster all contain the app selector in the \textit{spec} field.
+    Therefore we don't need to worry about \textit{Endpoints} objects.
+    The defined \textit{nodePorts} inside the \textit{ports} specification exposes the corresponding \textit{ports} and \textit{targetPorts} of the application inside the \textit{Pods}.
+    Since our cluster resides in an emulated environment using Docker containers the exposed ports need to be looped through the Docker network layer to be reachable from outside the \textit{Control Plane} container.
+    \cref{fig:port_mapping} illustrates the applied port mappings.
+\begin{Listing}[h]
+\begin{lstlisting}
+kind: Service
+apiVersion: v1
+metadata:
+  name: icm86-rmapp-nodeport
+  namespace: ecm
+spec:
+  type: NodePort
+  selector:
+    app: icm86-rmapp
+  ports:
+    - name: icm86-rmapp-websphere-admin-port
+      port: 9043
+      targetPort: 9043
+      nodePort: 30044
+      protocol: TCP
+    - name: icm86-rmapp-insecure-application-port
+      port: 9080
+      targetPort: 9080
+      nodePort: 30080
+      protocol: TCP
+    - name: icm86-rmapp-secure-application-port
+      port: 9443
+      targetPort: 9443
+      nodePort: 30443
+      protocol: TCP
+\end{lstlisting}
+\caption{Resource Manager Application~\textit{Nodeport} Configuration File}
+\label{lst:nodeport_config}
+\end{Listing}
+    }
+    \item[]{\textbf{Service}\\
+    The \textit{Service} configuration contains only minor differences compared to the \textit{Nodeport} configuration described in~\cref{lst:nodeport_config}.
+    It does not contain a \texttt{spec.type} attribute nor a \texttt{spec.ports.nodePort} attribute in each port definition.
+    This \textit{Service} handles the communication between \textit{Web Client} and \textit{Resource Manager}.
+    }
+    \item[]{\textbf{Deployment}\\
+    The \textit{Deployment} configuration file is described in~\cref{lst:deployment_config}.
+    It contains all information needed to operate the applications within a cluster.
+    For the Minimum Viable Prototype implemented during this thesis the number of \texttt{spec.replicas} was set to $1$.
+    The entry \texttt{spec.selector.matchLabels.app} sets a label to describe with which \textit{Pods} the \textit{Deployment} is associated.
+    The following section \texttt{spec.template} contains all information for the \textit{ReplicaSet} to generate new \textit{Pods} if necessary.
+    \texttt{spec.template.metadata} defines the label inside the cluster which is used by \textit{Services} to direct traffic to the deployed \textit{Pods}
+    The next section defined in \texttt{spec.template.spec.containers} specifies the structure of the launched \textit{Containers} inside the \textit{Pod} and details concerned with its life cycle.
+    Following the generation of the \textit{Container} based on the chosen image and the exposed ports the specified command is executed.
+    The \texttt{spec.template.spec.containers.command} runs the \textit{entrypoint} script inside the root directory of the image which is described in~\cref{lst:entrypoint}.
+    Simultaneously when starting the \texttt{command} the \texttt{startupProbe} is launched.
+    It continuously evaluates whether a TCP connection can be established with port $9443$.
+    The configuration of this probe allows a $15$ minute time frame for the application to start before terminating the \textit{Pod}.
+    The port $9443$ was selected because the main application can be reached that way so as soon as a connection would succeed the \textit{Ressource Manager Application} could be used.
+    The large time frame is chosen due to long start up phase of the \textit{WebSphere Application Server}.
+    Due to design decisions of the Docker image the \textit{Container} has to be kept running.
+    Therefore Kubernetes is not able to know whether the application inside the \textit{container} was still in a healthy state.
+    As a countermeasure the \texttt{livenessProbe} and \texttt{readinessProbe} are utilized based on the same assumptions regarding the port as the \texttt{startupProbe}.
+    The first reports to Kubernetes after $3$ failed connection attempts that the \textit{Pod} has to be restarted.
+    The second probe instructs the \textit{Service} to stop directing traffic to the \textit{Pod} after $1$ failed connection attempt.
+    After a \textit{Pod} is flagged as failed or the \textit{Pod} gets terminated due to scaling requirements \texttt{spec.template.spec.containers.lifecycle.preStop} is executed.
+    This command allows a graceful shutdown of the \textit{Websphere Application Server} inside the \textit{Pod} within the default time frame of $30$ seconds to prevent eventual resource leaks.
+\begin{Listing}[h]
+\begin{lstlisting}
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: icm86-rmapp
+  namespace: ecm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: icm86-rmapp
+  template:
+    metadata:
+      labels:
+        app: icm86-rmapp
+    spec:
+      containers:
+      - name: icm86-rmapp
+        image: ecmdocker.novalocal:5043/ipvs-as/icm86/cm8-rmapp:v1.2.5
+        ports:
+        - containerPort: 80
+        - containerPort: 9043
+        - containerPort: 9080
+        - containerPort: 9443
+        command:
+        - "/root/entrypoint.sh"
+        startupProbe:
+          failureThreshold: 30
+          periodSeconds: 20
+          timeoutSeconds: 10
+          tcpSocket:
+            port: 9443
+        livenessProbe:
+          periodSeconds: 5
+          timeoutSeconds: 2
+          successThreshold: 1
+          failureThreshold: 3
+          tcpSocket:
+            port: 9443
+        readinessProbe:
+          periodSeconds: 5
+          timeoutSeconds: 2
+          successThreshold: 1
+          failureThreshold: 1
+          tcpSocket:
+            port: 9443
+        lifecycle:
+          preStop:
+            exec:
+              command:
+              - "/bin/bash -c"
+              - "/opt/IBM/WebSphere/AppServer/profiles/icm86AppProfile/bin/stopServer.sh 
+                server1 -profileName icm86AppProfile -username wasadmin -password passw0rd"
+\end{lstlisting}
+\caption{Resource Manager Application~\textit{Deployment} Configuration File}
+\label{lst:deployment_config}
+\end{Listing}
+    \begin{itemize}
+        \item[] {\textbf{Entrypoint Script}\\
+        To successfully start the Resource Manager and the Content Navigator applications the following \textit{entrypoint.sh} script is run during setup time.
+        The developed script is displayed in~\cref{lst:entrypoint}.
+        At first it is enforced through \texttt{pipefail} that the whole script should exit with a non-zero status code if any command or pipe exits with a non-zero status code.
+        Subsequently the start script for the \textit{WebSphere Application Server} is called.
+        After a successful start the script maps the logs of the application to \textit{STDOUT} using the \texttt{tail} command.
+        The final step serves two purposes, at first it allows to inspect the logs from the outside of the \textit{Pod} by using \texttt{kubectl logs}.
+        Secondly it prevents the container from exiting and thus terminating the whole \textit{Pod}.
+        This procedure is necessary because the initially generated Docker image was operated in \textit{interactive} mode.
+        This means that the \textit{Docker Demon} keeps the \textit{STDIN} open even if the container is running in \textit{detached} mode.
+        Since Kubernetes \textit{Deployments} do not support an \textit{interactive} mode this workaround had to be implemented.
+\begin{Listing}[h]
+\begin{lstlisting}
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+echo -e "\n start the ICN-WAS server in the foreground "
+/root/icmStartWas.sh
+
+echo -e "ICN-WAS instance ready to go; tailing the sysout log file ..."
+/usr/bin/tail -n 100 -F /opt/IBM/WebSphere/AppServer/profiles/icm86AppProfile/logs/server1/rm/icmrm/icmrm.logfile
+\end{lstlisting}
+\caption{Resource Manager Application~\textit{Deployment} \textit{entrypoint.sh} script}
+\label{lst:entrypoint}
+\end{Listing}
+        }
+    \end{itemize}
+    }
+\end{itemize}
+
+\section{Source Code}
+The source code and image developed during this master thesis can be obtained from an internal repository resp. registry of the Institute of Parallel and Distributed Systems at the University Stuttgart.
+It includes the configuration files for the Kubernetes cluster as well as scripts to install all required dependencies, setup the environment and start all cluster components except the required \textit{Docker} image.
+The following steps work only within the environment of the university.
+\\
+\\
+To install all dependencies and load the Docker images from the internal registry simply run \texttt{./runSetupJobs.sh} in the root directory of the repository.
+It is important to mention that the required image to start the \textit{Pods} inside the \textit{KiND} cluster needs to be loaded in the Docker instance of the host beforehand.
+After all dependencies are available the \texttt{./start.sh} script can be executed which goes through following steps:
+\begin{enumerate}
+    \item Delete any old \textit{KiND} cluster with the name \textit{kind-ecm}
+    \item Create a new cluster based on the configuration file displayed in~\cref{lst:cluster_config}
+    \item Set the \textit{kubectl} context to the newly generated cluster
+    \item Load the required Docker images into the cluster
+    \item Instruct \texttt{kubectl} to create all required components
+\end{enumerate}
+Since loading all Docker images into \textit{KiND} can take a long time the additional script \texttt{repopulate.sh} was created.
+It allows to delete all components inside the cluster and recreate them based on new configuration files without deleting the cluster and reloading all Docker images.

@@ -1,0 +1,121 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{lipsum}  % produce dummy text as filler
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[parfill]{parskip}
+%%
+\begin{document}
+\lipsum[1-4] % Just a few filler paragraphs
+Test location.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.5\textwidth]{example-image-a.png}
+  \caption{An example image}
+\end{figure}
+
+\lipsum[6-10] % Just a few filler paragraphs
+
+
+\begin{center}
+  \includegraphics[height = 0.5\textheight]{example-image}
+\end{center}
+Some text
+\begin{center}
+  \includegraphics[width = 0.5\textwidth]{example-image}
+\end{center}
+%
+\begin{center}
+  \includegraphics[clip, trim = 0 0 50 50]{example-image}
+\end{center}
+%
+\begin{tabular}{*{3}{l}}
+  Animal & Food  & Size   \\
+  dog    & meat  & medium \\
+  horse  & hay   & large  \\
+  frog   & flies & small  \\
+\end{tabular}
+%% 
+\\
+\begin{tabular}{lll}
+  \toprule
+  Animal & Food  & Size   \\
+  \midrule
+  dog    & meat  & medium \\
+  \cmidrule{1-2}
+  horse  & hay   & large  \\
+  \cmidrule(r){1-1}
+  \cmidrule(rl){2-2}
+  \cmidrule(l){3-3}
+  frog   & flies & small  \\
+  \bottomrule
+\end{tabular}
+%%
+\paragraph{}
+\begin{tabular}{cp{9cm}}
+  \toprule
+  Animal & Description \\
+  \midrule
+  dog    & The dog is a member of the genus Canis, which forms part of the
+           wolf-like canids, and is the most widely abundant terrestrial
+           carnivore. \\
+  \addlinespace
+  cat    & The cat is a domestic species of small carnivorous mammal. It is the
+           only domesticated species in the family Felidae and is often referred
+           to as the domestic cat to distinguish it from the wild members of the
+           family. \\
+  \bottomrule
+\end{tabular}
+%%
+\paragraph{}
+\begin{tabular}{lll}
+  \toprule
+  \multicolumn{1}{c}{Animal} & \multicolumn{1}{c}{Food} & \multicolumn{1}{c}{Size} \\
+  \midrule
+  dog    & meat  & medium \\
+  horse  & hay   & large  \\
+  frog   & flies & small  \\
+  fuath  & \multicolumn{2}{c}{unknown} \\
+  \bottomrule
+\end{tabular}
+%%
+\paragraph{}
+\begin{tabular}{lll}
+  \toprule
+  Group     & Animal & Size   \\
+  \midrule
+  herbivore & horse  & large  \\
+            & deer   & medium \\
+            & rabbit & small  \\
+  \addlinespace
+  carnivore & dog    & medium \\
+            & cat    & small  \\
+            & lion   & large  \\
+  \addlinespace
+  omnivore  & crow   & small  \\
+            & bear   & large  \\
+            & pig    & medium \\
+  \bottomrule
+\end{tabular}
+%%
+Some text \hspace{1cm} more text.
+\vspace{5cm}
+Even more text.
+Let's have some font fun: \textbf{bold}, \textit{italic}, \textrm{roman},
+\textsf{sans serif}, \texttt{monospaced} and \textsc{small caps}.
+Normal text.
+
+{\itshape
+This text is italic.
+So it this: the effect is not limited to a paragraph.
+}
+\end{document}

@@ -1,0 +1,137 @@
+\section{IG DOMAIN ANALYSIS}
+\label{sec:domainanalysis}
+This section briefly introduces the domain sources we evaluated in our effort to identify valuable IG knowledge, concept classes and their meaning. Table 1 shows a representative list of practitioner organizations and public agencies, their frameworks and scope. Common to the taxonomy employed by each framework is a 3-level category structure. Column 2 in Table 1 outlines the overall scope of each governance frameworks and its functional areas. These are: General Governance Principles (IGMM), IG Reference Model (IGRM), Electronic Discovery Reference Model (EDRM), IT Governance Suite, Digital Asset Management, and Data Management Framework.
+%table1 
+\begin{table}[h]
+\caption{IG Frameworks.}
+\label{tab:example1} \centering
+\scalebox{0.55} {\begin{tabular} {|l|l|}
+  \hline
+  Organization & Framework\/Scope\\
+  \hline
+  ARMA & {IGMM - IG Maturity Model – Principles}\\
+  \hline
+  {CGOC / EDRM} & {IG Reference Model, Electronic Discovery Reference Model}\\
+  \hline
+  {ISACA	COBIT} & {IT Governance Suite} \\
+  \hline
+  {DAM}	& {Digital Asset Management} \\
+  \hline
+  {DAMA} 	& {Data Management Framework} \\
+  \hline
+  {NARA } &  {(NARA, 2006) National Archives and Records Administration} \\
+  \hline 
+  {Records Management}  & {Center of Research Libraries} \\
+  \hline
+ \end{tabular}}
+\end{table}
+%
+The main categories used across the frameworks are: Accountability, Transparency, Integrity, Protection, Compliance, Availability, Retention and Disposition. These categories become principles. They apply for the organizational or functional areas and play an essential role when implementing an IG-Program. See Figure 3. Each principle has a number of context specific capabilities and/or requirements assigned. They represent concept/class attributes or relationship properties. The frameworks also introduced a scalar metric called governance maturity level (GML), with a value range from 0 to 5 (i.e. ad ranging from ad hoc to a fully functional IG-Program implementation). A GML is computed from a specific subset of capabilities and requirements that must be satisfied by context and category. The last row of Table 1 lists (NARA, 2006) and CRL both represent government agencies. They share frameworks with a focus on the records management lifecycles and aspects to manage and operate Records-, Content Management System and Digital Archives. Their guidelines draw requirements from relevant standards like NIST.IR.8286C Staging Cybersecurity Risks for Enterprise Risk Management and Governance Oversight \cite{Quinn2022} and ISO-15489 Information and documentation — Records management \cite{ISO15489}. We evaluated also international ISO standards for the applicable domain as listed in Table 2. 
+%table 2
+\begin{table}[h]
+\caption{Table 2: ISO Standards.}
+\label{tab:example1} \centering
+ \scalebox{0.55} {\begin{tabular}{|l|l|}
+ %\begin{tabular}{|c|>{\raggedleft\arraybackslash}l|}
+ \hline
+  {Organization} & {Standards}\\
+  \hline
+  {ISO Standards}	 & {}\\
+  \hline
+  {ISO-14271} & {Open Archive Information System}\\
+  \hline
+  {ISO-15489} & {Records Management: Concepts and Principles} \\
+  \hline
+  {ISO-16363}	& {Audit and certification} \\
+  \hline
+  {ISO-27000} & {Information Security Management Systems (ISMS) standards} \\
+  \hline 
+  {-}  & {including Information security} \\
+  {-}  & {cybersecurity and privacy protection } \\
+  {-}  & {risk management guidelines} \\
+  {(ISO-37301, 2021)}  & {Compliance Management systems } \\
+  \hline
+ \end{tabular}}
+\end{table}
+%
+Table 3 shows 3 privacy regulations in force in the US, EU and DE jurisdictions. We included them as they represent the security and privacy categories. The two major principles information governance these days. 
+%
+%table 3
+\begin{table}[h]
+\caption{Table 3: Regulators and Regulations.}
+\label{tab:example1} \centering
+ \scalebox{0.55} {\begin{tabular}{|l|l|}
+ %\begin{tabular}{|c|>{\raggedleft\arraybackslash}l|}
+ \hline
+  {Regulator} & {Regulations}\\
+  \hline
+  {US-GSA} & {US Government Services Agency Directives: Privacy Act \cite{USGSA}}\\
+  \hline
+  {Germany} & {DE Datenschutz-Grundverordnung} \\
+  \hline 
+ \end{tabular}}
+\end{table}
+%
+Interesting to note: Ensuring compliance with these regulations already employs a complex implementation model. It involves elements of core Enterprise Information Systems (EIS) concepts, like the ones introduced and discussed in the use case scenario. 
+In moving from business to implementation concepts we searched for standards related to enterprise information management (EIM) systems and looked at their design models. The 3 Standards of interest are listed in Table 4. These are the 2 OASIS standards: 1) CMIS, the “Content Management Interoperability Services” standard, 2) TOSCA the “Topology and Orchestration of Specification for Cloud Applications” and 3) the “Trustworthy Digital Repositories” specification which was standardized in ISO-14271
+%table4 
+\begin{table}[h]
+\caption{The ECM Blueprint, Design, Deployment and Cloud Orchestration Standards.}
+\label{tab:example1} \centering
+ \scalebox{0.55} {\begin{tabular}{|l|l|}
+ %\begin{tabular}{|c|>{\raggedleft\arraybackslash}l|}
+ \hline
+  {Organization} & {Standards}\\
+  \hline
+  {OASIS} & {CMIS Content Management Interoperability Services \cite{CMIS}}\\
+  \hline
+  {OASIS} & {TOSCA Topology and Orchestration Specification } \\
+  {} & { for Cloud Applications \cite{TOSCA}} \\  
+  \hline 
+  {ISO / NASA} & { Trustworthy Digital Repositories \cite{ISO14721}}\\
+  \hline
+ \end{tabular}}
+\end{table}
+%
+All three standards are well suited for our approach as they provide the required links between the business/governance and systems design concepts. In order to create a complementary IG graph store (IGG), we collected concept\/class instances (individuals) from open source and commercial services offering and classified them by functional area and capabilities. Table 5 shows the group of vendors and lists their product and platform services related to key IG classes and functional components.
+%table5
+\begin{table}[h]
+\caption{Vendors and their service offerings.}
+\label{tab:example1} \centering
+ \scalebox{0.55} {\begin{tabular}{|l|l|}
+ %\begin{tabular}{|c|>{\raggedleft\arraybackslash}l|}
+ \hline
+  {Vendor} & {Product}\\
+  \hline
+  {Alfresco} & {Alfresco Digital Business Platform: \cite{AlfrescoECM}}\\
+  { } & {Content, Process \& Governance Services (ACS, APS, AGS)}\\
+  \hline
+  {OASIS} & {TOSCA Topology and Orchestration Specification } \\
+  {} & { for Cloud Applications \cite{TOSCA}} \\  
+  \hline 
+  {OpenText} & {Opentext / Documentum}\\
+  \hline
+  {IBM} & {Content Manager, FileNet, OnDemand \& Co-Products}\\
+  \hline
+  {Microsoft} & {Microsoft Office 365\& Co-Products \cite{MicrosoftECM}}\\
+  \hline
+  \hline
+  {Vendor	} & {Cloud Platform Services}\\
+  \hline
+  {IBM / RedHat} & {IBM Cloud Platform / Openshift}\\
+  \hline
+  {Microsoft} & {Microsoft Azure}\\
+  \hline
+  {Google} & {Google Cloud Services}\\
+  \hline
+  {Amazon} & {Amazon Cloud Services}\\
+  \hline
+  {Open Source} &	{Docker, Kubernetes, others … }\\
+  \hline
+ \end{tabular}}
+\end{table}
+%
+The results of the domain analysis lead to the design of our ontology. We considered subsets of the vocabulary terms and concepts. Basically, all those related to services design, their implementation and operational aspects. The ISO standards documentation provided relevant contextual information, which we used to harmonize the chosen terms before including them in the IGO semantic schema. The vendor sources provided domain knowledge on information management and information governance through their product offerings. Overall, through our research we found that standards and regulations specify what has to be done and what must be avoided when implementing an IG program. Whereas frameworks emphasize more on guidelines and how to achieve corporate and regulatory compliance, such to reach a specific maturity level. Implementing an IG program requires state-of the art technology and methods that promote flexible and efficient operations favoring the creation of business value and reduce business, compliance and regulatory risks. Companies in their actual implementation efforts can take advantage from information and artefacts delivered by open source communities, payable services and online platforms complementing their in-house development without going through a lengthy RFP process. 
+
+\subsection {2.1 Contributions}
+Our contribution can be summarized as follows: we created an IG taxonomy, used it to design an ontology (IGO) based on harmonized concept terms and formalized relationships. Built an IG Graph (IGG) loaded with instances (individuals) annotated with domain knowledge on best practices, guidelines and service descriptions and made this knowledge accessible through semantic queries. To complement the ontology and the IG graph we created also   IGREPO a repository of best practices documentation, guideline documents and prototype implementations of service templates written in their domain specific language (DSL) i.e. TOSCA and YAML.

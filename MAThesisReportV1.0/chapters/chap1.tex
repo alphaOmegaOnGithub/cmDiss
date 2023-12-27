@@ -1,0 +1,51 @@
+\chapter{INTRODUCTION}
+
+\paragraph\ 
+This chapter gives a brief introduction about the project report, the overall idea of the project, its research goal, objectives, and the main motivation behind choosing this project.
+
+\section{Overview}
+\paragraph\ It is said that around 463 \acs{ZB} (1 \acs{ZB}$=10^{21} bytes$) of data will be created every day by 2025\cite{dataprediction}. Data is being collected and processed every second in almost every aspect of our lives. With the amount of data being generated, the responsibility of storing them in an orderly and efficient manner in order to be able to use them for the required purposes is vital. This is where \ac{IG} comes in. Gartner Glossary \cite{igdefinition} defines "Information governance as the specification of decision rights and an accountability framework to ensure appropriate behavior in the valuation, creation, storage, use, archiving, and deletion of information". Information Governance aims towards having data (both paper and electronic) stored effectively and efficiently, abiding by the set rules. It also ensures 1) compliance with legal and regulatory obligations, including \acs{GDPR}, 2) individuals' privacy, 3) accuracy, and 4) security of data. 
+
+\acs{GDPR} stands for \acl{GDPR}. It superseded the \ac{DPD} which was enacted in Oct 1995 to regulate the processing and movement of personal data within \ac{EU}. \acs{DPD} was adopted at a time when the internet was still in its infant days. \acs{GDPR} is a stiffer enforcement of \acs{DPD}'s key principles but with more specific requirements and global scope. \acs{GDPR} \cite{gdpr} has 11 chapters and 99 articles. 
+
+In order to have a huge amount of collected data in a usable form, it is very important to be able to categorize it appropriately and extract/identify sensible data so that they can be then stored and processed accordingly. Doing this manually would be extremely hectic, time-consuming, and would require a lot of manpower and still have room for inaccuracies (human error). Hence, there is a great need for Information Retrieval and Analytic services to be able to automate the processes like indexing, tagging, and classifying unstructured data so that it is easily accessible when one needs to search/extract any information from these datasets. \ac{ML} and \ac{AI} are the most prominent methods used by the \ac{IR} services. Some of the leading players in this field are \acs{IBM}, Google, Microsoft, Amazon, and so on. Each of them provides competitive services to users (individuals and organizations) to extract information from their datasets with the help of their services which use the \acs{ML} and \acs{AI} algorithms.  
+
+\section{Motivation}
+\paragraph\ 
+As cloud services and information retrieval services are relatively new and not yet common knowledge for everyone, it is necessary to do research before choosing a cloud service for one's requirement at hand. One main research would involve knowing which all algorithms and features are offered by these services as ready to use on datasets, side by side in a tabular form so that the user can compare. With this kind of information, it is easy to determine which cloud service would suit best for the task and an idea about their performance. The motivation of this thesis is to find what features are provided in each service and their adherence to the \acs{GDPR} guidelines and fill in table \ref{skeletontable} below with information that could be best found and tested in the duration of this thesis. The author was also new to the topic and hopes the thesis would help new users and assist in the initial research phase and give a consolidated comparison of a few of the main features of major information retrieval services in today's digital world.
+
+\begin{table}[h]
+\caption{Skeleton of the evaluation matrix} 
+\begin{center}
+   
+ \begin{tabular}{| p{2cm} || p{3.1cm} | p{2.5cm} | p{2cm} | p{3cm} |}
+   
+\hline
+ \textbf{Service Provider} & \textbf{\acs{IBM}Watson Natural \hspace{1cm} Language \hspace{1cm} Understanding} & \textbf{Microsoft Azure \hspace{1cm} Cognitive \hspace{1cm} Services} & \textbf{Amazon Textract} & \textbf{Google Cloud Natural \hspace{1cm} Language}\\ \hline \hline 
+
+     Metric 1   & xyz & xyz & xyz & xyz\\ \hline
+     Metric 2   & xyz & xyz & xyz & xyz\\ \hline
+     Metric 3   & xyz & xyz & xyz & xyz\\ \hline
+     ........   & ... & ... & ... & ...\\ \hline
+     ........   & ... & ... & ... & ...\\ \hline
+     ........   & ... & ... & ... & ...\\ \hline
+     Metric N-1 & xyz & xyz & xyz & xyz\\ \hline
+     Metric N   & xyz & xyz & xyz & xyz\\ \hline
+
+\end{tabular}                          
+\label{skeletontable}   
+\end{center}
+\end{table}
+
+\section{Research Goal}
+\paragraph\ 
+A comparative analysis of \acs{ML} and \acs{AI} technologies for information retrieval, in terms of functional richness, quality, and flexibility to integrate with external \ac{EIM} applications, by testing the technologies on unstructured data.
+
+\section{Research Objectives}
+\paragraph\ 
+The objectives are: 
+\begin{enumerate}
+   \item Exploring the characteristics and capabilities of recent services in the context of \acl{IG} with respect to their capacity of extracting information from a corpus of unstructured data of different types, formats, and sizes.
+   \item Design a test plan and perform a series of test runs evaluating the results based on accuracy and completeness. For example, using a test scenario in which \acs{PII}-data (\acl{PII}) is extracted from a corpus of financial transaction test data. 
+   \item Documentation of the performance of these services on different datasets in the form of the evaluation matrix. 
+\end{enumerate}
