@@ -1,2 +1,2 @@
 # IGONTO
-An Ontology on Information Governance 
+An Ontology on Information Governance Services
