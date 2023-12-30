@@ -1,0 +1,1 @@
+"D:\opt\texlive\2020\bin\win32\makeindex.exe" ausarbeitung\diss.glo -s ausarbeitung\diss.ist -t ausarbeitung\diss.glg -o ausarbeitung\diss.gls

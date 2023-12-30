@@ -1,0 +1,1 @@
+sonstiges\epstool-3.08\bin\epstool.exe --copy --bbox %1.eps %1_cropped.eps

@@ -1,0 +1,473 @@
+%
+% Pakete um UFT8 Zeichnens‰tze verwenden zu kˆnnen und die dazu passenden Schriften.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{color}
+\usepackage{xcolor}
+
+\usepackage[a4paper]{geometry}
+\geometry{left=2.0cm,right=3.5cm,top=3.5cm,bottom=4.0cm}
+
+%
+% eigene Quotation Umgebung
+%
+\setlength{\marginparwidth}{2cm}
+\newcommand{\quotepaper}[2]{\marginpar{\tiny \textbf{\color{red}QUOTE:
+#1}}{\color{red}#2}}
+
+%
+% wirklich h¸bsche Kapitel‹berschriften!
+% alternativen sind: Conny, Sonny, Rejne, Lenny, Glenn, Bjornstrup 
+%
+\usepackage[Bjarne]{fncychap}
+\ChTitleVar{\raggedleft\huge\rmfamily\bfseries}
+
+% zur Erzeugung h¸bscher Schmuckinitialen
+\usepackage{lettrine}
+% zum setzen der Farbe der Schmuckinitialen auf dunkles grau
+\renewcommand{\LettrineFontHook}{\color[gray]{0.35}}
+
+% Packe f¸r den Lebenslauf
+\usepackage[]{currvita}
+
+\usepackage{epic}
+
+%
+% mathematische symbole aus dem AMS Paket.
+%
+\usepackage{amsmath}
+%\usepackage{amssymb}
+
+\usepackage{program}
+\usepackage{listing}
+\usepackage{newlfont}
+
+%
+% ein paar Definitionen
+%
+\usepackage{framed}
+\usepackage{soul}
+\definecolor{shadedarkcolor}{gray}{.9}
+\definecolor{shadelightcolor}{gray}{.97}
+\definecolor{shadedarkercolor}{gray}{.25}
+
+\definecolor{ttcolor}{gray}{.1}
+
+%
+% Definition f¸r schraffierte Box - dunkel
+%
+\newenvironment{shadeddark}{
+  \def\FrameCommand{\fboxsep=\FrameSep \colorbox{shadedarkcolor}}
+  \MakeFramed {\advance\hsize-1\width\everypar{\parshape 1 0.0cm \textwidth}\FrameRestore}}
+{\endMakeFramed}
+
+%
+% Definition f¸r schraffierte Box - hell
+%
+\newenvironment{shadedlight}{
+  \def\FrameCommand{\fboxsep=\FrameSep \colorbox{shadelightcolor}}
+  \MakeFramed {\advance\hsize-1\width\everypar{\parshape 1 0.0cm \textwidth}\FrameRestore}}
+{\endMakeFramed}
+
+\definecolor{quotescolor}{gray}{.5}
+\newcommand*\openquote{\makebox(25,-22){\scalebox{5}{\textcolor{quotescolor}{``}}}}
+\newcommand*\closequote{\makebox(25,-22){\scalebox{5}{\textcolor{quotescolor}{''}}}}
+
+\newcommand{\abs}[1]{\ensuremath{\left\vert#1\right\vert}}
+
+% Literaturverzeichnis nach deutschem Standard
+\usepackage{bibgerm}
+
+%
+% Paket f¸r ‹bersetzungen ins Deutsche
+%
+%\usepackage[english, ngerman, german]{babel}
+\usepackage[ngerman, german, english]{babel}
+
+%
+% Paket f¸r Quotes
+%
+\usepackage[babel,german=quotes,english=american]{csquotes}
+
+% Den ‹bersetzer setzen
+%\usepackage[ngerman]{translator}
+
+\usepackage{url}
+
+%
+% Paket f¸r Links innerhalb des PDF Dokuments
+%
+\definecolor{LinkColor}{rgb}{0,0,0}
+\usepackage[%
+	pdftitle={Titel der Arbeit},% Titel der Diplomarbeit
+	pdfauthor={Vorname Nachname},% Autor(en)
+	pdfcreator={LaTeX, LaTeX with hyperref and KOMA-Script},% Genutzte Programme
+	pdfsubject={Genehmigte Abhandlung zur Erlangung der Wuerde eines Doktors der Naturwissenschaften (Dr. rer. nat)}, % Betreff
+	pdfkeywords={Liste, von, Keywords}, % Keywords halt :-)	
+	dvipdfm,	
+	breaklinks=true]{hyperref} 
+\hypersetup{colorlinks=true,% Definition der Links im PDF File
+	linkcolor=LinkColor,%
+	citecolor=LinkColor,%
+	filecolor=LinkColor,%
+	menucolor=LinkColor,%
+	pagecolor=LinkColor,%
+	urlcolor=LinkColor,
+	breaklinks=true}
+%\usepackage{breakurl}
+%\usepackage{hypdvips}
+
+% fuer Abk¸rzungsverzeichnis
+% ------------------- Abk¸rzungsverzeichnis: ----------------------------
+\usepackage[
+%nonumberlist, %keine Seitenzahlen anzeigen
+acronym,      %ein Abk√ºrzungsverzeichnis erstellen
+shortcuts,    %
+toc %,          %Eintr√§ge im Inhaltsverzeichnis
+%section	%im Inhaltsverzeichnis auf section-Ebene erscheinen
+]
+{glossaries}
+%\deftranslation{Acronyms}{List of Abbreviations}
+
+%Ein eigenes Symbolverzeichnis erstellen
+\newglossary[slg]{symbolslist}{syi}{syg}{Symbolverzeichnis}
+
+%Den Punkt am Ende jeder Beschreibung deaktivieren
+\renewcommand*{\glspostdescription}{}
+
+\newglossarystyle{myacrstyle}{%
+  \renewenvironment{theglossary}%
+     {\begin{longtable}{llp{\glsdescwidth}}}%
+     {\end{longtable}}%
+  \renewcommand*{\glossaryheader}{}%
+  \renewcommand*{\glsgroupheading}[1]{}%
+  \renewcommand*{\glossaryentryfield}[5]{%
+    \glstarget{##1}{##2} & ##3\glspostdescription\space ##5\\}%
+  \renewcommand*{\glossarysubentryfield}[6]{%
+     & \glstarget{##2}{\strut}##4\glspostdescription\space ##6\\}%
+  \renewcommand*{\glsgroupskip}{ & \\}%
+}
+
+%Glossar-Befehle anschalten
+\makeglossaries
+
+%Diese Befehle sortieren die Eintr‰ge in den
+%einzelnen Listen:
+%makeindex -s datei.ist -t datei.alg -o datei.acr datei.acn
+%makeindex -s datei.ist -t datei.glg -o datei.gls datei.glo
+%makeindex -s datei.ist -t datei.slg -o datei.syi datei.syg
+
+%\makenomenclature
+%------------------------------------------------------------------------
+
+% fuer Stichwortverzeichnis
+\usepackage{makeidx}
+%\usepackage{index}
+\makeindex
+
+%
+% special math environment
+%
+\usepackage{latexsym}
+
+\usepackage{subfigure}
+\usepackage{dblfloatfix}
+%\usepackage{booktabs}
+\usepackage{multirow}
+%\usepackage{fancybox}
+\usepackage{verbatim}
+%\usepackage{todonotes}
+\usepackage{booktabs}
+
+\usepackage{tabularx}
+\usepackage{rotating}
+\usepackage{threeparttable}
+\usepackage{colortbl}
+
+\usepackage{lscape}
+
+\usepackage{afterpage}
+
+% 
+% f¸r h¸nsche Listings - START
+% 
+\usepackage{listings}
+%\lstloadlanguages{TeX, XML}
+\usepackage{courier}
+
+\lstdefinelanguage{JavaScript}
+  {morekeywords={break, else, new, var, case, finally, return, void,
+catch, for, switch, while, continue, function, this, with, default, if,
+throw, delete, in, try, do, instanceof, typeof, alert,
+abstract, enum, int, short, boolean, export, interface, static, byte,
+extends, long, super, char, final, float, const, private,
+debugger, implements, protected, volatile, double, import, public},
+   sensitive,
+   morecomment=[l]//,
+   morecomment=[s]{/*}{*/},
+   morestring=[b]",
+   morestring=[b]',
+  }[keywords,comments,strings]
+  
+\lstdefinelanguage{WebIDL}
+  {morekeywords={interface, sequence, optional, readonly, attribute,
+boolean, long, getter, exception, const, unsigned, void, short},
+   sensitive,
+   morecomment=[l]//,
+   morecomment=[s]{/*}{*/},
+  }[keywords,comments]
+
+\lstset{
+		language=XML,
+%         basicstyle=\footnotesize\ttfamily, % Standardschrift
+         basicstyle=\small\sffamily, % Standardschrift
+%         basicstyle=\small\ttfamily, % Standardschrift
+         numbers=left,               % Ort der Zeilennummern
+         numberstyle=\tiny,          % Stil der Zeilennummern
+         columns=fullflexible,
+         %stepnumber=2,               % Abstand zwischen den Zeilennummern
+         numbersep=10pt,              % Abstand der Nummern zum Text
+         backgroundcolor=\color{shadelightcolor},      % choose the background color. You must add \usepackage{color}
+         tabsize=2,                  % Groesse von Tabs
+         extendedchars=true,         %
+         captionpos=b,                   % sets the caption-position to bottom
+         breaklines=true,            % Zeilen werden Umgebrochen
+         keywordstyle=\textbf, %\color{red},
+    	frame=tb,
+    	columns=fullflexible,
+ %        keywordstyle=[1]\textbf,    % Stil der Keywords
+ %        keywordstyle=[2]\textbf,    %
+ %        keywordstyle=[3]\textbf,    %
+ %        keywordstyle=[4]\textbf,   \sqrt{\sqrt{}} %
+%         stringstyle=\color{shadedarkercolor}\ttfamily, % Farbe der String
+         stringstyle=\color{shadedarkercolor}\sffamily, % Farbe der String
+         showspaces=false,           % Leerzeichen anzeigen ?
+         showtabs=false,             % Tabs anzeigen ?
+         xleftmargin=17pt,
+         framexleftmargin=17pt,
+         framexrightmargin=0pt,
+         framexbottommargin=4pt,
+         rulesepcolor=\color{shadelightcolor},
+         %backgroundcolor=\color{lightgray},
+         showstringspaces=false,      % Leerzeichen in Strings anzeigen ?        
+         abovecaptionskip=\abovecaptionskip,
+         belowcaptionskip=\belowcaptionskip,
+         aboveskip=1.5\floatsep,
+         floatplacement=hbt!
+         %xleftmargin=0cm,
+         %xrightmargin=0cm
+ }
+
+\usepackage{caption}
+\captionsetup{labelfont=bf}
+
+% definiert die Widmungsseite
+\usepackage{styles/dedication}
+
+% nur vorerst zum Testen
+\usepackage{blindtext}
+
+%
+% Paket zum Erweitern der Tabelleneigenschaften
+%
+\usepackage{array}
+
+%
+% Paket f√ºr sch√∂nere Tabellen
+%
+\usepackage{booktabs}
+
+%
+% Paket um Grafiken einbetten zu k√∂nnen
+%
+\usepackage{lscape,graphicx}
+\usepackage{subfigure}
+\usepackage{dblfloatfix}
+%\usepackage{graphicx}
+
+%
+% Definitionen wir die Abbildungen etc. zu heiﬂen haben.
+%
+\def\figurename{Figure }
+\def\equationname{Equation }
+\def\tablename{Table }
+\def\listingname{Listing }
+
+\def\sectionname{Section }
+\def\chaptername{Chapter }
+
+%
+% Zeilenumbruch bei Bildbeschreibungen.
+%
+\setcapindent{1em}
+
+%
+%--------- Kann nur verwendet werden, wenn "fancyhdr" ausgeschaltet ist!!! -----
+%
+% KOMA-Script-Paket f¸r schicke Kopf- und Fuﬂzeilen
+\usepackage[automark]{scrpage2}
+\usepackage{floatflt}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{textcomp}
+
+\usepackage{scrtime}
+\usepackage{scrdate}
+
+% Kopf- und Fuﬂzeile
+\clearscrheadfoot	 % alten Standardkram raus
+\ohead[\pagemark]{\pagemark}	% oben rechts Seitenzahl laut Richtlinie
+%\chead[]{}
+\ihead{\headmark}	 % automatischen Kapitelnamen rein
+
+%\ifoot{\author}
+%\cfoot{untenmitte}
+\ofoot{\small \todaysname, \today -- \thistime[:]}
+
+% m√∂glicherweise Zeilenabstand in Kopfzeile auf 1 setzen
+%\addtokomafont{pagehead}{\linespread{1}\selectfont}
+%\setkomafont{pagehead}{\linespread{1}}
+\pagestyle{scrheadings}
+%
+%--------- Kann nur verwendet werden, wenn "fancyhdr" ausgeschaltet ist!!! -----
+%
+
+% serifenlose Schrift als Default verwenden
+%\renewcommand{\familydefault}{\sfdefault}
+
+% Spezielle Schrift im Koma-Script setzen. --> sollte nicht nˆtig sein
+%\setkomafont{sectioning}{\sffamily\bfseries}
+%\setkomafont{captionlabel}{\sffamily\bfseries}
+%\setkomafont{pagehead}{\sffamily\itshape}
+%\setkomafont{pagenumber}{\sffamily\itshape}
+%\setkomafont{descriptionlabel}{\sffamily\bfseries}
+
+
+%\newcommand{\berfont}{
+%	\fontencoding{T1}
+%	\fontfamily{beramono}
+%	\fontseries{m}
+%	\fontshape{it}
+%	\fontsize{12}{15}
+%	\selectfont
+%}
+
+%\setkomafont{sectioning}{\berfont\bfseries}
+%\setkomafont{captionlabel}{\berfont\bfseries}
+%\setkomafont{pagehead}{\berfont\itshape}
+%\setkomafont{pagenumber}{\berfont\itshape}
+%\setkomafont{descriptionlabel}{\berfont\bfseries}
+
+\addtokomafont{sectioning}{\rmfamily}
+
+%Fuer englische Texte sind serifenhafte Ueberschriften gut. Deshalb hier der Befehl zum Aktivieren von serifenhaften Ueberschriften 
+\setkomafont{disposition}{\bfseries\rmfamily}
+
+%\setkomafont{chapterentrypagenumber}{\sffamily\bfseries}
+%\usekomafont{disposition}
+%\usepackage{palatino}
+%\usepackage{times}
+%\usepackage{utopia}
+\usepackage{beramono}
+%\usepackage{libertine}
+%\typearea{calc}
+
+%% Only if the base font of the document is to be sans serif
+%\renewcommand*\familydefault{\sfdefault}
+%\setkomafont{disposition}{\sffamily\bfseries}
+%\addtokomafont{sectioning}{\sffamily\bfseries}
+% %
+% Otherwise use this setting
+\setkomafont{disposition}{\rmfamily\bfseries}
+\addtokomafont{sectioning}{\rmfamily\bfseries}
+
+%\renewcommand{\rmdefault}{ppl}
+%\renewcommand{\sfdefault}{phv}
+%\renewcommand{\ttdefault}{pcr}
+
+%\linespread {1.0}
+%\linespread {1.05}
+\linespread {1.10}
+%\linespread {1.15}
+
+%\usepackage{ae} % Sch√∂ne Schriften f√ºr PDF-Dateien
+
+\usepackage{microtype}
+
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.35em}
+
+%
+% Paket um Textteile drehen zu k√∂nnen
+%
+\usepackage{rotating}
+
+% ---------------------------------------------------------------------------
+%
+
+%\usepackage{cslibib}
+\usepackage[sectcntreset]{bibtopic}
+
+%
+% Literaturverzeichnis-Stil
+%
+\usepackage[%
+	%round,	%(default) for round parentheses;
+	square,	% for square brackets;
+	%curly,	% for curly braces;
+	%angle,	% for angle brackets;
+	%colon,	% (default) to separate multiple citations with colons;
+	comma,	% to use commas as separaters;
+	%authoryear,% (default) for author-year citations;
+	numbers,	% for numerical citations;
+	%super,	% for superscripted numerical citations, as in Nature;
+	sort,		% orders multiple citations into the sequence in which they appear in the list of references;
+	sort&compress,    % as sort but in addition multiple numerical citations
+                  % are compressed if possible (as 3-6, 15);
+	%longnamesfirst,  % makes the first citation of any reference the equivalent of
+                  % the starred variant (full author list) and subsequent citations
+                  %normal (abbreviated list);
+	%sectionbib,      % redefines \thebibliography to issue \section* instead of \chapter*;
+                  % valid only for classes with a \chapter command;
+                  % to be used with the chapterbib package;
+	%nonamebreak,     % keeps all the authors names in a citation on one line;
+                  %causes overfull hboxes but helps with some hyperref problems.
+	%authoryear, 	% to enable author-year citation support
+]{natbib}
+%\bibliographystyle{alphabin} % alternative styles: natdin, plaindin
+%\bibliographystyle{plainnat} % alternative styles: natdin, plaindin
+%\bibliographystyle{natdin} % alternative styles: natdin, plaindin
+%\bibliographystyle{abbrvdin}
+
+%\setlength\bibhang{3em}
+
+% Strukturiertiefe bis subsubsection{} m√∂glich
+%
+\setcounter{secnumdepth}{3}
+
+%
+% Dargestellte Strukturiertiefe im Inhaltsverzeichnis
+%
+%\setcounter{tocdepth}{3}
+\setcounter{tocdepth}{2}
+
+%
+%Zeilenabstand wird um den Faktor 1.5 ver√§ndert
+%
+%\renewcommand{\baselinestretch}{1.25}
+
+% Disable single lines at the start of a paragraph (Schusterjungen)
+\clubpenalty = 10000
+
+% Disable single lines at the end of a paragraph (Hurenkinder)
+\widowpenalty = 10000 
+\displaywidowpenalty = 10000
+
+%\renewcommand{\abstractname}{Executive Summary}
+
+% Seitengroessen - Gegen Schusterjungen und Hurenkinder... 
+\newcommand{\largepage}{\enlargethispage{\baselineskip}} 
+\newcommand{\shortpage}{\enlargethispage{-\baselineskip}} 
+
+\setlength{\emergencystretch}{3em} % Silbentrennung reduzieren durch mehr frei Raum zwischen den Worten

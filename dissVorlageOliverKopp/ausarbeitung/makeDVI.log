@@ -1,0 +1,526 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=latex)
+ restricted \write18 enabled.
+ Source specials enabled.
+entering extended mode
+(./diss.tex
+LaTeX2e <2020-10-01> patch level 2
+L3 programming layer <2020-10-27> xparse <2020-03-03>
+(d:/opt/texlive/2020/texmf-dist/tex/latex/koma-script/scrreprt.cls
+Document Class: scrreprt 2020/09/21 v3.32 KOMA-Script document class (report)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/koma-script/scrkbase.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/koma-script/scrbase.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/koma-script/scrlfile.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/koma-script/scrlogo.sty)))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty)))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/koma-script/tocbasic.sty)
+
+Class scrreprt Warning: You've used obsolete option `bibtotoc'.
+(scrreprt)              Usage of this option indicates an old document
+(scrreprt)              and changes compatibility level using
+(scrreprt)              `bibliography=totoc,version=first,
+(scrreprt)              enabledeprecatedfontcommands' that may result
+(scrreprt)              in further warnings.
+(scrreprt)              If you don't want this, you should simply
+(scrreprt)              replace option `bibtotoc' by `bibliography=totoc'.
+
+
+Class scrreprt Warning: deprecated option `enabledeprecatedfontcommands'.
+(scrreprt)              Note, that this option was already depreacted when
+(scrreprt)              it has been defined. Support for old font commands
+(scrreprt)              has been removed from KOMA-Script more than one
+(scrreprt)              decade ago. It is not recommended to use them any
+(scrreprt)              longer. Therefore usage of this class option also
+(scrreprt)              is not recommended.
+
+
+Class scrreprt Warning: You've used obsolete option `liststotoc'.
+(scrreprt)              Usage of this option indicates an old document
+(scrreprt)              and changes compatibility level using
+(scrreprt)              `listof=totoc,version=first,
+(scrreprt)              enabledeprecatedfontcommands' that may result
+(scrreprt)              in further warnings.
+(scrreprt)              If you don't want this, you should simply
+(scrreprt)              replace option `liststotoc' by `listof=totoc'.
+
+
+Class scrreprt Warning: deprecated option `enabledeprecatedfontcommands'.
+(scrreprt)              Note, that this option was already depreacted when
+(scrreprt)              it has been defined. Support for old font commands
+(scrreprt)              has been removed from KOMA-Script more than one
+(scrreprt)              decade ago. It is not recommended to use them any
+(scrreprt)              longer. Therefore usage of this class option also
+(scrreprt)              is not recommended.
+
+
+Class scrreprt Warning: You've used obsolete option `idxtotoc'.
+(scrreprt)              Usage of this option indicates an old document
+(scrreprt)              and changes compatibility level using
+(scrreprt)              `index=totoc,version=first,
+(scrreprt)              enabledeprecatedfontcommands' that may result
+(scrreprt)              in further warnings.
+(scrreprt)              If you don't want this, you should simply
+(scrreprt)              replace option `idxtotoc' by `index=totoc'.
+
+
+Class scrreprt Warning: deprecated option `enabledeprecatedfontcommands'.
+(scrreprt)              Note, that this option was already depreacted when
+(scrreprt)              it has been defined. Support for old font commands
+(scrreprt)              has been removed from KOMA-Script more than one
+(scrreprt)              decade ago. It is not recommended to use them any
+(scrreprt)              longer. Therefore usage of this class option also
+(scrreprt)              is not recommended.
+
+
+Class scrreprt Warning: You've used obsolete option `halfparskip'.
+(scrreprt)              Usage of this option indicates an old document
+(scrreprt)              and changes compatibility level using
+(scrreprt)              `parskip=half,version=first,
+(scrreprt)              enabledeprecatedfontcommands' that may result
+(scrreprt)              in further warnings.
+(scrreprt)              If you don't want this, you should simply
+(scrreprt)              replace option `halfparskip' by `parskip=half'.
+
+
+Class scrreprt Warning: deprecated option `enabledeprecatedfontcommands'.
+(scrreprt)              Note, that this option was already depreacted when
+(scrreprt)              it has been defined. Support for old font commands
+(scrreprt)              has been removed from KOMA-Script more than one
+(scrreprt)              decade ago. It is not recommended to use them any
+(scrreprt)              longer. Therefore usage of this class option also
+(scrreprt)              is not recommended.
+
+
+Class scrreprt Warning: You've used obsolete option `pointlessnumbers'.
+(scrreprt)              Usage of this option indicates an old document
+(scrreprt)              and changes compatibility level using
+(scrreprt)              `numbers=noenddot,version=first,
+(scrreprt)              enabledeprecatedfontcommands' that may result
+(scrreprt)              in further warnings.
+(scrreprt)              If you don't want this, you should simply
+(scrreprt)              replace option `pointlessnumbers' by `numbers=noenddot'
+.
+
+
+Class scrreprt Warning: deprecated option `enabledeprecatedfontcommands'.
+(scrreprt)              Note, that this option was already depreacted when
+(scrreprt)              it has been defined. Support for old font commands
+(scrreprt)              has been removed from KOMA-Script more than one
+(scrreprt)              decade ago. It is not recommended to use them any
+(scrreprt)              longer. Therefore usage of this class option also
+(scrreprt)              is not recommended.
+
+
+Class scrreprt Warning: You've used obsolete option `normalheadings'.
+(scrreprt)              Usage of this option indicates an old document
+(scrreprt)              and changes compatibility level using
+(scrreprt)              `headings=normal,version=first,
+(scrreprt)              enabledeprecatedfontcommands' that may result
+(scrreprt)              in further warnings.
+(scrreprt)              If you don't want this, you should simply
+(scrreprt)              replace option `normalheadings' by `headings=normal'.
+
+
+Class scrreprt Warning: deprecated option `enabledeprecatedfontcommands'.
+(scrreprt)              Note, that this option was already depreacted when
+(scrreprt)              it has been defined. Support for old font commands
+(scrreprt)              has been removed from KOMA-Script more than one
+(scrreprt)              decade ago. It is not recommended to use them any
+(scrreprt)              longer. Therefore usage of this class option also
+(scrreprt)              is not recommended.
+
+
+Package scrreprt Warning: You've used obsolete option `13pt'.
+(scrreprt)                Usage of this option indicates an old document
+(scrreprt)                and changes compatibility level using
+(scrreprt)                `fontsize=13pt,version=first,
+(scrreprt)                enabledeprecatedfontcommands' that may result
+(scrreprt)                in further warnings.
+(scrreprt)                If you don't want this, you should simply
+(scrreprt)                replace option `13pt' by `fontsize=13pt'.
+
+
+Class scrreprt Warning: deprecated option `enabledeprecatedfontcommands'.
+(scrreprt)              Note, that this option was already depreacted when
+(scrreprt)              it has been defined. Support for old font commands
+(scrreprt)              has been removed from KOMA-Script more than one
+(scrreprt)              decade ago. It is not recommended to use them any
+(scrreprt)              longer. Therefore usage of this class option also
+(scrreprt)              is not recommended.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13> not available
+(Font)              size <12> substituted on input line 2434.
+
+(d:/opt/texlive/2020/texmf-dist/tex/latex/koma-script/typearea.sty
+
+Package typearea Warning: DIV for 13.0pt and used papersize
+(typearea)                not defined!
+(typearea)                Using DIV=calc.
+
+DIV calculation for typearea with good linewidth.
+))
+\@input{special/settings.aux}
+(./special/settings.tex
+(d:/opt/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/base/fontenc.sty
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <13> not available
+(Font)              size <12> substituted on input line 112.
+
+) (d:/opt/texlive/2020/texmf-dist/tex/latex/graphics/color.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/graphics-def/dvips.def)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/graphics/dvipsnam.def))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
+(d:/opt/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
+(d:/opt/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty)))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/fncychap/fncychap.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/lettrine/lettrine.sty
+(d:/opt/texlive/2020/texmf-dist/tex/generic/minifp/minifp.sty)
+Loading lettrine.cfg
+(d:/opt/texlive/2020/texmf-dist/tex/latex/lettrine/lettrine.cfg))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/currvita/currvita.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/eepic/epic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+) (d:/opt/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(d:/opt/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/program/program.sty
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <18.72003> not available
+(Font)              size <17.28> substituted on input line 841.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18.72003> not available
+(Font)              size <17.28> substituted on input line 841.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13.10396> not available
+(Font)              size <12> substituted on input line 841.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <18.72003> not available
+(Font)              size <17.28> substituted on input line 841.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <13.10396> not available
+(Font)              size <12> substituted on input line 841.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <18.72003> not available
+(Font)              size <17.28> substituted on input line 841.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <13.10396> not available
+(Font)              size <12> substituted on input line 841.
+
+
+LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <18.72003> not available
+(Font)              size <17.28> substituted on input line 841.
+
+
+LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <13.10396> not available
+(Font)              size <12> substituted on input line 841.
+
+(d:/opt/texlive/2020/texmf-dist/tex/latex/amsfonts/ueur.fd))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/listing/listing.sty
+Package `listing', V1.2, <1999/05/25>
+) (d:/opt/texlive/2020/texmf-dist/tex/latex/base/newlfont.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/base/latexsym.sty))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/framed/framed.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/generic/soul/soul.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/germbib/bibgerm.sty
+** Macros for german `BibTeX'ing added to Style Option `german' 20 Apr 1993 **
+** idea and languages `german' and `USenglish' implemented by M. Wallmeier **
+** Modified for LaTeX 2e and german.sty 2.5b by A. Scherer 1 Nov 1995 **
+** Modified for ngerman.sty and babel.sty by H. Harders 21 August 2000 **)
+(d:/opt/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+(d:/opt/texlive/2020/texmf-dist/tex/generic/babel/babel.def
+(d:/opt/texlive/2020/texmf-dist/tex/generic/babel/txtbabel.def))
+(d:/opt/texlive/2020/texmf-dist/tex/generic/babel-german/ngerman.ldf
+(d:/opt/texlive/2020/texmf-dist/tex/generic/babel-german/ngermanb.ldf))
+(d:/opt/texlive/2020/texmf-dist/tex/generic/babel-german/german.ldf
+(d:/opt/texlive/2020/texmf-dist/tex/generic/babel-german/germanb.ldf))
+(d:/opt/texlive/2020/texmf-dist/tex/generic/babel-english/english.ldf))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/csquotes/csquotes.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/csquotes/csquotes.def)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/url/url.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
+(d:/opt/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(d:/opt/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+(d:/opt/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(d:/opt/texlive/2020/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/generic/bitset/bitset.sty
+(d:/opt/texlive/2020/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/hyperref/hdvipdfm.def
+(d:/opt/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+
+Package hyperref Warning: Option `pagecolor' is not available anymore.
+
+(d:/opt/texlive/2020/texmf-dist/tex/latex/glossaries/base/glossaries.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(d:/opt/texlive/2020/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(d:/opt/texlive/2020/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/textcase/textcase.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/xfor/xfor.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/datatool/datatool-base.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/substr/substr.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/datatool/datatool-fp.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/fp/fp.sty
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+(d:/opt/texlive/2020/texmf-dist/tex/latex/fp/defpattern.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/fp/fp-basic.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/fp/fp-addons.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/fp/fp-snap.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/fp/fp-exp.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/fp/fp-trigo.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/fp/fp-pas.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/fp/fp-random.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/fp/fp-eqn.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/fp/fp-upn.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/fp/fp-eval.sty)
+! Incomplete \iffalse; all text was ignored after line 79.
+<inserted text> 
+                \fi 
+l.25 
+     
+! Undefined control sequence.
+\GenericError  ...                                
+                                                    #4  \errhelp \@err@     ...
+l.25 
+     
+! Undefined control sequence.
+\GenericError  ...                                
+                                                  \let \@err@               ...
+l.25 
+     
+! Undefined control sequence.
+\GenericError  ...                                
+                                                  \@empty \def \MessageBreak...
+l.25 
+     
+! Undefined control sequence.
+\GenericError  ...                                
+                                                     \endgroup 
+l.25 
+     
+! Undefined control sequence.
+\GenericError  ...                                
+                                                    #4  \errhelp \@err@     ...
+l.25 
+     
+! Undefined control sequence.
+\GenericError  ...                                
+                                                  \let \@err@               ...
+l.25 
+     
+! Undefined control sequence.
+\GenericError  ...                                
+                                                  \@empty \def \MessageBreak...
+l.25 
+     
+! Undefined control sequence.
+\GenericError  ...                                
+                                                     \endgroup 
+l.25 
+     
+Runaway argument?
+\@badrequireerror \@ifstar \@defdefault@ds \@declareoption {nomessage\ETC.
+! Paragraph ended before \@fileswith@pti@ns was complete.
+<to be read again> 
+                   \par 
+l.31 
+     
+)
+Runaway definition?
+->\doaction \action-89 [\relax \protect \let \@expl@@@filehook@file@pop@assign@
+@nnnn \ETC.
+! File ended while scanning definition of \FP@gen@mul@splitted.
+<inserted text> 
+                }
+l.45 \RequirePackage
+                    {datatool-base}
+))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/glossaries/base/glossaries-compatible
+-307.sty)
+
+! Package xkeyval Error: key `xindygloss' undefined.
+
+See the xkeyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1064  nomain,noglossaryindex}
+                               
+
+! Package xkeyval Error: key `xindynoglsnumbers' undefined.
+
+See the xkeyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1064  nomain,noglossaryindex}
+                               
+
+! Package xkeyval Error: key `makeindex' undefined.
+
+See the xkeyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1064  nomain,noglossaryindex}
+                               
+
+! Package xkeyval Error: key `notranslate' undefined.
+
+See the xkeyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1064  nomain,noglossaryindex}
+                               
+
+! Package xkeyval Error: key `nolong' undefined.
+
+See the xkeyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1064  nomain,noglossaryindex}
+                               
+
+! Package xkeyval Error: key `nosuper' undefined.
+
+See the xkeyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1064  nomain,noglossaryindex}
+                               
+
+! Package xkeyval Error: key `notree' undefined.
+
+See the xkeyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1064  nomain,noglossaryindex}
+                               
+
+! Package xkeyval Error: key `nostyles' undefined.
+
+See the xkeyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1064  nomain,noglossaryindex}
+                               
+
+! Package xkeyval Error: key `nomain' undefined.
+
+See the xkeyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1064  nomain,noglossaryindex}
+                               
+
+! Package xkeyval Error: key `noglossaryindex' undefined.
+
+See the xkeyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1064  nomain,noglossaryindex}
+                               
+(d:/opt/texlive/2020/texmf-dist/tex/latex/tracklang/tracklang.sty
+(d:/opt/texlive/2020/texmf-dist/tex/generic/tracklang/tracklang.tex))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/translator/translator.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/glossaries-english/glossaries-english
+.ldf)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/glossaries-german/glossaries-german.l
+df)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.s
+ty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/tools/longtable.sty))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/supertabular/supertabular.sty))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/base/makeidx.sty)
+Writing index file diss.idx
+(d:/opt/texlive/2020/texmf-dist/tex/latex/subfigure/subfigure.sty
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(d:/opt/texlive/2020/texmf-dist/tex/latex/subfigure/subfigure.cfg))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/dblfloatfix/dblfloatfix.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/base/fixltx2e.sty
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
+)) (d:/opt/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/tools/verbatim.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/tools/tabularx.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/tools/array.sty))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/graphics/rotating.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg))))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/threeparttable/threeparttable.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/colortbl/colortbl.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/graphics/lscape.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/tools/afterpage.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/listings/listings.cfg))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/psnfss/courier.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/caption/caption-koma.sto))
+(d:/opt/texlive/2020/texmf-dist/tex/latex/caption/ltcaption.sty))
+(./styles/dedication.sty)
+(d:/opt/texlive/2020/texmf-dist/tex/latex/blindtext/blindtext.sty
+(d:/opt/texlive/2020/texmf-dist/tex/latex/tools/xspace.sty))
+
+! LaTeX Error: File `scrpage2.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+! Emergency stop.
+<read *> 
+         
+l.310 \usepackage
+                 {floatflt}^^M
+No pages of output.
+Transcript written on diss.log.

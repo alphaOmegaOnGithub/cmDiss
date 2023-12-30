@@ -1,0 +1,170 @@
+\documentclass[%
+	latex,%              LaTex verwenden
+	%pdftex,%              PDFTex verwenden
+	%a5paper,%             A5 Papier
+	abstract,%						bestimmt, dass "Abstract" bzw. "Zusammenfassung" bei abstract-Umgebung gezeigt wird
+	pagesize, %			
+	a4paper,%             A4 Papier
+	twoside,%             Einseitig
+	openright,
+	bibtotoc,%    		Literaturverzeichnis einfügen bibtotocnumbered: nummeriert
+	liststotoc,%		Verzeichnisse einbinden in toc
+	idxtotoc,%            Index ins Verzeichnis einfügen
+	halfparskip,%        Europäischer Satz mit abstand zwischen Absätzen
+	chapterprefix,%       Kapitel anschreiben als Kapitel
+	headsepline,%         Linie nach Kopfzeile
+	%footsepline,%         Linie vor Fusszeile
+	pointlessnumbers,%     Nummern ohne abschließenden Punkt
+	%draft,	 % während des Schreibens an lassen und am Ende durch 'final' ersetzen 'final',
+	normalheadings,	% größe der Überschriften, standard ist viel zu groß
+	%bigheadings ,
+	13pt,%                 Größere Schrift, besser lesbar am bildschrim
+	%DIVcalc,
+	%BCOR6mm
+]{scrreprt} %scrbook
+
+%-Einstellungen---------------------------------------------------
+\include{special/settings}
+
+%-zusaetzliche Kommandos*-----------------------------------------
+\include{special/commands}
+
+%-Definitionen für das Glossar------------------------------------
+\include{special/glossaries_glossary}
+
+\include{special/glossaries_acronyms}
+
+\include{special/glossaries_symbols}
+
+%-Dokument--------------------------------------------------------
+\begin{document}
+% This option prevents unbreakable strings to be written over the textwidth borders. 
+\sloppy
+\pagenumbering{arabic}
+
+%-Titelblatt------------------------------------------------------
+\include{special/titlepage}
+\cleardoublepage
+\thispagestyle{empty}
+%\maketitle
+
+%-Widmung*--------------------------------------------------------
+\include{special/dedication}
+\cleardoublepage
+
+%\maketitle
+
+%-Eigene Trennregeln*---------------------------------------------
+\include{special/hyphenations}
+
+%-Danksagung*-----------------------------------------------------
+\thispagestyle{empty}
+\include{special/acknowledgement}
+\cleardoublepage
+
+%-Inhaltsverzeichnis----------------------------------------------
+% Sort dafür, dass das Inhaltsverzeichnis serifenlos gezeichnet wird. 
+%{\renewcommand*\normalfont{\usekomafont{disposition}}
+%\normalfont
+%\tableofcontents}
+\tableofcontents
+\cleardoublepage
+
+
+%-Abkürzungsverzeichnis--------------------------------------------
+%Glossar ausgeben
+%\printglossary[style=altlist,style=altlist,title=Glossary]
+%\cleardoublepage
+
+%Abkürzungen ausgeben
+%\deftranslation[to=German]{Acronyms}{Abkürzungsverzeichnis}
+\printglossary[type=\acronymtype,style=altlist,title=List of Abbreviations,toctitle=List of Abbreviations]
+\cleardoublepage
+
+%Symbole ausgeben
+%\printglossary[type=symbolslist,style=altlist,title=Symbols]
+%\cleardoublepage
+
+%-Zusammenfassung / Abstract*-------------------------------------
+\include{special/abstract}
+\cleardoublepage
+
+%-Kapitel---------------------------------------------------------
+\part{Title Part I}
+\include{chapter01/chapter}
+\include{chapter02/chapter}
+
+\part{Title Part II}
+\include{chapter03/chapter}
+\include{chapter04/chapter}
+
+\part{Title Part III}
+\include{chapter05/chapter}
+\include{chapter06/chapter}
+
+\part{Title Part IV}
+\include{chapter07/chapter}
+\include{chapter08/chapter}
+
+%-Anhang*----------------------------------------------------------
+\appendix
+\part{Source Code Samples and Auxiliary Materials}
+
+%-Kapitel des Anhangs*---------------------------------------------
+\include{appendix01/appendix}
+\include{appendix02/appendix}
+
+%-Abbildungsverzeichnis--------------------------------------------
+%\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\listoffigures
+\cleardoublepage
+
+%-Tabellenverzeichnis--------------------------------------------
+%\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+\listoftables
+\cleardoublepage
+
+%-Stichwortverzeichnis--------------------------------------------
+%
+%\include{special/stichwortverzeichnis}
+
+%-Literaturverzeichnis--------------------------------------------
+\phantomsection
+\addcontentsline{toc}{chapter}{Author Publications}
+\begin{btSect}[unsrt]{diss-own}
+\chapter*{Author Publications}
+
+\makeatletter
+\renewcommand\@biblabel[1]{\rule{\MyIndent+2em}{0em}}
+\def\@biblabel#1{\textbullet}
+\makeatother
+
+\btPrintNotCited
+\end{btSect}
+\cleardoublepage
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+\begin{btSect}[natdin]{diss}
+\chapter*{Bibliography}
+\btPrintCited
+\end{btSect}
+\cleardoublepage
+
+%-Stichwortverzeichnis--------------------------------------------
+\include{special/stichwortverzeichnis}
+\cleardoublepage
+
+
+%-Lebenslauf*-----------------------------------------------------
+\addcontentsline{toc}{chapter}{Curriculum Vitae}
+\include{special/cv}
+
+%-Selbstständigkeiterklärung--------------------------------------
+%\newpage
+%\thispagestyle{empty}
+%\mbox{}
+
+%\include{special/declaration}
+
+\end{document}

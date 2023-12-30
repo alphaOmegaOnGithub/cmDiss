@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "epstool --copy --bbox ${1}.eps ${1}_cropped.eps"
+epstool --copy --bbox ${1}.eps ${1}_cropped.eps
+#cp ${1}_cropped.eps /mnt/_-_dissertation_-_/ausarbeitung/bilder/${1}_cropped.eps

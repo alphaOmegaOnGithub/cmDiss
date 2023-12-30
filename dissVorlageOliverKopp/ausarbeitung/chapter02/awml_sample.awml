@@ -1,0 +1,31 @@
+<awml:awml	xmlns:nsat="http://www.nexus.uni-stuttgart.de/1.0/NSAT"
+			xmlns:nsas="http://www.nexus.uni-stuttgart.de/1.0/NSAS"
+			xmlns:nscs="http://www.nexus.uni-stuttgart.de/1.0/NSCS"
+			xmlns:awml="http://www.nexus.uni-stuttgart.de/2.0/AWML">
+
+	<awml:nexusobject>
+		<nsas:nol>
+			<nsas:value> nexus:<URL>||<AAID>/<OID> </nsas:value>
+		</nsas:nol>
+		<nsas:type>
+			<nsas:value> nscs:Building </nsas:value>
+		</nsas:type>
+		<nsas:kind>
+			<nsas:value> real </nsas:value>
+		</nsas:kind>
+		<nsas:name>
+			<nsas:value> Museum of Arts </nsas:value>
+		</nsas:name>
+		<nsas:pos>
+			<nsas:value>
+				<gml:Point srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+					<gml:coordinates> 48.743668,9.097413 </gml:coordinates>
+				</gml:Point>
+			</nsas:value>
+		</nsas:pos>
+	</awml:nexusobject>
+
+	[ ..... ]
+
+</awml:awml>
+

@@ -1,0 +1,421 @@
+% -*- coding:utf-8 mod:LaTeX -*-
+% !TeX spellcheck = de_DE
+%Neue deutsche Trennmuster
+%Siehe http://www.ctan.org/pkg/dehyph-exptl und http://projekte.dante.de/Trennmuster/WebHome
+%Nur für pdflatex, nicht für lualatex
+\RequirePackage[ngerman=ngerman-x-latest]{hyphsubst}
+%Warns about outdated packages and missing caption delcarations
+%See https://www.ctan.org/pkg/nag
+\RequirePackage[l2tabu, orthodox]{nag}
+\documentclass[paper=a5,twoside,fontsize=10pt, DIV=calc, headings=small, bibliography=totoc, listof=totoc]{scrbook}
+\usepackage[utf8]{inputenc}
+
+\input{shared/template}
+\usepackage{shared/titlepage}
+
+% binding correction
+\setlength{\evensidemargin}{-24pt}
+\setlength{\oddsidemargin}{-24pt}
+
+%\input{commands}
+
+\bibliography{bibliography}
+
+\hyphenation{
+Spe-zi-fi-ka-tion
+In-te-gra-tion
+An-for-de-rung An-for-de-run-gen
+Be-nut-zer-ober-flä-che
+Mes-sung-en
+aus-zu-tau-schen
+Lauf-zeit-in-for-ma-tionen
+% Dürfen nicht getrennt werden
+AROMA TOSCA BPMN OASIS OMG DMTF IT DevOps
+}
+
+\begin{document}
+\iftex4ht
+\Configure{graphics*}  % After begin document. Package tex4ht
+  {pdf}
+  {\Link[\csname Gin@base\endcsname .png]{}{}% link the png
+  \Picture[pict]{\csname Gin@base\endcsname .png width:80\% align=center border=0}%  Show the png
+  \EndLink
+  }
+
+\Css{body {text-align:justify;}}
+
+%all LaTeX formulas as pictures
+\Configure{$}{\PicMath}{\EndPicMath}{}
+%$ % <- syntax highlighting fix for emacs
+\fi
+
+%Tipp von http://goemonx.blogspot.de/2012/01/pdflatex-ligaturen-und-copynpaste.html
+%siehe auch http://tex.stackexchange.com/questions/4397/make-ligatures-in-linux-libertine-copyable-and-searchable
+%
+%ONLY WORKS ON MiKTeX
+%On other systems, download glyphtounicode.tex from http://pdftex.sarovar.org/misc/
+%
+\input glyphtounicode.tex
+\pdfgentounicode=1
+
+% Die Seitennummerierung erfolgt durchlaufend ab der Titelseite. Also keine
+% Spielereien mit römischen Ziffern usw. - Die ISO 7144 schreibt das sogar für
+% wissenschaftliche Werke vor.
+% Von Promitionsordnung verlangt!
+% Deshalb ist \frontmatter DEAKTIVIERT
+%\frontmatter
+\title{Thesis Title}
+%\author{\texorpdfstring{\href{http://www.example.org/}{Author Name}}{Author Name}}
+\author{Author Name}
+\date{\today}
+\keywords{TODO}
+\firstexaminer{Prof.~Dr.~Max Mustermann}
+\secondexaminer{Prof.~Dr.~Emma Musterfrau}
+\dateofexamination{unbekannt}
+\placeofbirth{Gebortsort}
+\faculty{Fakultät für Informatik, Elektrotechnik und Informationstechnik}
+\department{Institut für Architektur von Anwendungssystemen}
+
+\maketitle
+
+% This is necessary if you have more than 9 sections/subsections/subsubsections
+% \makeatletter
+% \renewcommand\l@section{\@dottedtocline{1}{1.5em}{3em}}
+% \renewcommand\l@subsection{\@dottedtocline{2}{1.5em}{4.3em}}
+% \renewcommand\l@subsubsection{\@dottedtocline{3}{1.5em}{5.6em}}
+% \makeatother
+
+\tableofcontents
+\clearpage
+
+\pagestyle{justpagenums}
+% \input{abstract}
+
+%\mainmatter
+\pagestyle{scrheadings}
+
+%% --- Zusammenfassung ---------------------------------------------
+\chapter*{Zusammenfassung}
+%Silbentrennung Deutsch
+\begin{otherlanguage}{ngerman}
+Kurzfassung der Arbeit.
+\end{otherlanguage}
+\clearpage
+
+%% --- Abstract Page---------------------------------------------
+\chapter*{Abstract}
+%Silbentrennung Englisch
+\begin{otherlanguage}{american}
+The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so it can expand into the blank space above the title too\ldots
+Some people think monkeys are weird, but I disagree.
+\end{otherlanguage}
+\clearpage
+
+%% --- Acknowledgements page------------------------------------
+\chapter*{Danksagungen}
+I would like to thank the little green men from Mars. Without their anal probing equipment, the medical experiments on the monkeys described in this thesis would have been considerably more unpleasant for all parties involved.
+\clearpage
+
+\pagestyle{scrheadings}
+
+\chapter{Test}
+\label{chap:test}
+
+\Citet{WSPA} beschreiben die Umsetzung einer serviceorientierten Architektur mittels Web-Services, während \citet{zMR2005} BPMN um den Aspekt des Risikomanagements erweitern.
+
+Das Potenzmengensymbol $\powerset$ ist auch korrekt und kein kleines Weierstraß-p ($\wp$).
+
+\textmarker{Markierter Text.}
+\modified{Manuelle Markierung für Text, der seit der letzten Version geändert wurde.}
+
+%provided indirectly by pdfcomment.sty (soulpos).
+\hl{In Gelb hervorgehoben.}
+
+Checkmark: \dingcheck. Crossmark: \dingcross.
+
+Referencetest: \Cref{ssec:example}, \cref{fig:Abbildung} und \cref{alg:example}.
+
+\begin{figure}
+\missingfigure{}
+\caption{Abbildung}
+\label{fig:Abbildung}
+\end{figure}
+
+\begin{landscape}
+\begin{figure}
+\missingfigure{}
+\caption{Gedrehte Abbildung}
+\label{fig:AbbildungGedreht}
+\end{figure}
+\end{landscape}
+
+\begin{algorithm}
+\caption{$algo$}
+\label{alg:example}
+\begin{algorithmic}[1]
+\State $a \gets 0$
+\State State 2\label{alg1:state2}
+\end{algorithmic}
+\end{algorithm}
+
+\section{Definitionen}
+\begin{definition}[Title]
+\label{def:def1}
+Definition Text
+\end{definition}
+
+\Cref{def:def1} zeigt \ldots
+
+
+\section{Aufzählungen}
+\begin{enumerate}[label=\alph*)]
+\item a
+\item b
+\item c
+\item d
+\end{enumerate}
+
+Equivalent to paralist's inparaenum:
+\begin{enumerate*}[label=\alph*)]
+\item a
+\item b
+\item c
+\item d
+\end{enumerate*}
+
+\begin{description}
+\item[first] Erstens
+\item[second] Zweitens
+\item[third] Drittens
+\end{description}
+
+\begin{description}
+\item[\texttt{first}] Erstens
+\item[\texttt{second}] Zweitens
+\item[\texttt{third}] Drittens
+\end{description}
+
+%works only if package enumitem is loaded
+\begin{description}[font=\ttfamily]
+\item[first] Erstens
+\item[second] Zweitens
+\item[third] Drittens
+\end{description}
+
+\begin{description}[style=unboxed]
+\item[first label with a long description text breaking over one line. Enabled by enumitem package] Erstens
+\item[second] Zweitens
+\item[third] Drittens
+\end{description}
+
+\begin{Description}
+\item[first label with a long description text breaking over one line. Defined in template.tex] Erstens
+\item[second] Zweitens
+\item[third] Drittens
+\end{Description}
+
+\begin{itemize}
+\item Erstens
+\item Zweitens
+\item Drittens
+\end{itemize}
+
+Optionaler Parameter ändert den Marker, der vorangestellt ist. Siehe \url{http://www.weinelt.de/latex/item.html}.
+\begin{itemize}
+\item[A] Erstens
+\item[B] Zweitens
+\item[C] Drittens
+\end{itemize}
+
+Falsche Benutzung des optionalen Parameters wie folgt:
+\begin{itemize}
+\item[first] Erstens
+\item[second] Zweitens
+\item[third] Drittens
+\end{itemize}
+Dabei ist zu beachten, dass es sich bei Einbindung von \texttt{enumitem} anders verhält als bei \texttt{paralist}.
+
+
+\section{fquote}
+
+\begin{fquote}[T.\ Informatiker]
+Bis nächsten Freitag ist das Programm fertig.
+\end{fquote}
+
+\begin{gfquote}{T.\ Informatiker}
+Bis nächsten Freitag ist das Programm fertig.
+\end{gfquote}
+
+\todo{Hier muss noch kräftig Text produziert werden}
+
+\section{Varioref Demonstration}
+Siehe \vref{chap:test}.
+
+\section{Algorithmen}
+\begin{algorithm}
+\caption{Algorithmus 2}
+\label{alg:example2}
+\begin{algorithmic}[1]
+\State $a \gets 0$
+\State State 2\label{alg2:state2}
+\end{algorithmic}
+\end{algorithm}
+
+\Cref{alg:example} hat bereits einen Algorithmus gezeigt.
+Test der Zeilenreferenzierung: Zeile~\ref{alg1:state2} (\cref{alg:example}) und Zeile~\ref{alg2:state2} (\cref{alg:example2}).
+
+\section{Listing Demonstration}
+Minted ist das beste, aber funktioniert nur, wenn \href{http://pygments.org/download/}{pygments} installiert ist und pdflatex mit \texttt{-shell-escape} ausgeführt wird.
+
+\iffalse
+\begin{listing}
+\begin{minted}[linenos=true]{xml}
+<process name="reisebuero">
+</process>
+\end{minted}
+\caption{Beispielprozess}
+\label{lst:beispielprozess}
+\end{listing}
+\fi
+
+Alter Stil mittels des Listings-Pakets ist in \cref{lst:beispielprozess} gezeigt.
+%Listing-Umgebung wurde durch \newfloat{Listing} definiert
+\begin{lstlisting}[float,caption={Beispielprozess},label={lst:beispielprozess}]
+<process name="reisebuero">
+</process>
+\end{lstlisting}
+
+\section{Demonstration von refenums}
+\label{sec:method}
+%See http://mirror.ctan.org/macros/latex/contrib/refenums/demo.tex for a full usage guide
+%Setup ``Steps'' not having a print form
+\setupRefEnums[~]{Schritt}{ONLYSHORT}
+
+\defRefEnum[subsection]{Schritt}{Anforderungsanalyse}{rqa}
+\label{sec:rqa}
+\blindtext
+
+\defRefEnum[subsection]{Schritt}{Spezifikation}{spec}
+\blindtext
+
+\subsection{Zusammenfassung}
+In \cref{sec:method} wurde zuerst \refEnumFull{Schritt}{rqa} vorgestellt.
+Anschließend wurde \refEnumFull{Schritt}{spec} beschrieben.
+
+\section{Demonstration für Kommentare}
+Das ist ein Text.
+\change{FL1: Text angepasst}{Geänderter Text}.
+Hier nur ein Kommentar\comment{Kommentar}.
+
+Alternativ: \modified{Nur geändert, ohne Rückverweis auf Korrekturkommentar}.
+
+
+\section{Section}
+
+\section{Section}
+
+\section{Section}
+
+\section{Section}
+
+\section{Section}
+
+\section{Section}
+
+\section{Section}
+
+\section{Section}
+
+\section{Section}
+
+\section{Section}
+\blindtext
+
+\section{Section}
+
+\section{Section}
+
+\section{Section}
+
+\section{Section}
+
+\section{Section}
+
+\section{Section}
+
+\section{Section}
+
+\section{Section}
+
+\section{Section}
+
+\section{Section}
+
+\section{Section}
+
+\subsection{Subsection}
+\label{ssec:example}
+\blindtext
+
+\subsection{Subsection}
+\subsection{Subsection}
+\subsection{Subsection}
+\subsection{Subsection}
+\subsection{Subsection}
+\subsection{Subsection}
+\subsection{Subsection}
+\subsection{Subsection}
+\subsection{Subsection}
+\subsection{Subsection}
+\subsection{Subsection}
+\subsection{Subsection}
+\subsection{Subsection}
+\subsection{Subsection}
+\subsection{Subsection}
+\subsection{Subsection}
+\subsection{Subsection}
+\subsection{Subsection}
+\subsection{Subsection}
+\subsection{Subsection}
+
+%\input{content/chapter1}
+\setchapterfooter{Kleiner Fuß!}
+\chapter{Transformation of WS-BPEL 2.0 into Executable Workflow Networks}
+\label{chap:bpel-ewfn-transformation}
+
+%Um die Fußzeile zu demonstrieren
+\blindtext[3]
+
+\resetchapterfooter
+
+\printbibliography
+\noindent
+Alle URLs wurden zuletzt am 17.01.2014 gepr\"uft.
+
+\clearpage
+\listoffigures
+\listoftables
+
+\chapter*{Definitionsverzeichnis}
+\addcontentsline{toc}{chapter}{Definitionsverzeichnis}
+\listtheorems{definition}
+
+\appendix
+
+% 'Anhang' ins Inhaltsverzeichnis
+%\phantomsection
+%\addcontentsline{toc}{part}{Anhang}
+
+\chapter{Anhangstest}
+
+\begin{figure}
+Test
+\caption{Beispielabbildung im Anhang}
+\end{figure}
+
+%\input{content/Z-Anhang}
+
+\IfDefined{printindex}{\printindex}
+\IfDefined{printnomenclature}{\printnomenclature}
+
+\end{document}

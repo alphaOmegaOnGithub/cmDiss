@@ -1,0 +1,46 @@
+\select@language {english}
+\select@language {english}
+\contentsline {chapter}{List of Abbreviations}{9}{section*.2}
+\select@language {english}
+\contentsline {chapter}{Abstract}{11}{section*.4}
+\select@language {ngerman}
+\contentsline {chapter}{Deutsche Zusammenfassung}{13}{section*.5}
+\contentsline {part}{\numberline {I}Title Part I}{17}{part.1}
+\contentsline {chapter}{\numberline {1}Introduction}{19}{chapter.1}
+\contentsline {section}{\numberline {1.1}Contributions}{21}{section.1.1}
+\contentsline {section}{\numberline {1.2}Outline}{22}{section.1.2}
+\contentsline {chapter}{\numberline {2}Introduction}{25}{chapter.2}
+\contentsline {section}{\numberline {2.1}Contributions}{27}{section.2.1}
+\contentsline {section}{\numberline {2.2}Outline}{28}{section.2.2}
+\contentsline {part}{\numberline {II}Title Part II}{31}{part.2}
+\contentsline {chapter}{\numberline {3}Introduction}{33}{chapter.3}
+\contentsline {section}{\numberline {3.1}Contributions}{34}{section.3.1}
+\contentsline {section}{\numberline {3.2}Outline}{35}{section.3.2}
+\contentsline {chapter}{\numberline {4}Introduction}{37}{chapter.4}
+\contentsline {section}{\numberline {4.1}Contributions}{38}{section.4.1}
+\contentsline {section}{\numberline {4.2}Outline}{39}{section.4.2}
+\contentsline {part}{\numberline {III}Title Part III}{41}{part.3}
+\contentsline {chapter}{\numberline {5}Introduction}{43}{chapter.5}
+\contentsline {section}{\numberline {5.1}Contributions}{44}{section.5.1}
+\contentsline {section}{\numberline {5.2}Outline}{45}{section.5.2}
+\contentsline {chapter}{\numberline {6}Introduction}{47}{chapter.6}
+\contentsline {section}{\numberline {6.1}Contributions}{48}{section.6.1}
+\contentsline {section}{\numberline {6.2}Outline}{49}{section.6.2}
+\contentsline {part}{\numberline {IV}Title Part IV}{51}{part.4}
+\contentsline {chapter}{\numberline {7}Introduction}{53}{chapter.7}
+\contentsline {section}{\numberline {7.1}Contributions}{54}{section.7.1}
+\contentsline {section}{\numberline {7.2}Outline}{55}{section.7.2}
+\contentsline {chapter}{\numberline {8}Introduction}{57}{chapter.8}
+\contentsline {section}{\numberline {8.1}Contributions}{58}{section.8.1}
+\contentsline {section}{\numberline {8.2}Outline}{59}{section.8.2}
+\contentsline {part}{\numberline {V}Source Code Samples and Auxiliary Materials}{61}{part.5}
+\contentsline {chapter}{\numberline {A}Code Examples}{63}{appendix.A}
+\contentsline {section}{\numberline {A.1}NPGM Beispielgraph}{63}{section.A.1}
+\contentsline {chapter}{\numberline {B}Implementation Example of an Operator}{65}{appendix.B}
+\contentsline {section}{\numberline {B.1}Source Code}{65}{section.B.1}
+\contentsline {section}{\numberline {B.2}Meta Data}{65}{section.B.2}
+\contentsline {chapter}{List of Figures}{67}{appendix*.9}
+\contentsline {chapter}{List of Tables}{69}{appendix*.10}
+\contentsline {chapter}{Author Publications}{71}{section*.11}
+\contentsline {chapter}{Bibliography}{73}{section*.13}
+\contentsline {chapter}{Curriculum Vitae}{75}{appendix*.14}

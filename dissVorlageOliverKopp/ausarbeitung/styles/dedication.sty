@@ -1,0 +1,32 @@
+%% dedication
+
+\newcommand*{\dmessage}[1]{\def\@dmessage{#1\xspace}}
+\def\@dmessage{
+	\@latex@warning@no@line{Package `scrthesis': No \noexpand\dmessage given}}
+\newcommand*{\dauthor}[1]{\def\@dauthor{#1\xspace}}
+\def\@dauthor{
+	\@latex@warning@no@line{Package `scrthesis': No \noexpand\dauthor given}}
+
+\renewcommand\dedication{
+	\thispagestyle{empty}
+	%\phantomsection 
+	%\refstepcounter{dummy}
+	\pdfbookmark[1]{Dedication}{Dedication}
+
+	\vspace*{3cm}
+
+	\begin{center}
+		\textit{"\@dmessage" \\ \medskip}
+		\hspace{200pt} --- \@dauthor
+		%\emph{Ohana} means family. \\
+		%Family means nobody gets left behind, or forgotten. \\ \medskip
+		%--- Lilo \& Stitch    
+	\end{center}
+
+	%\medskip
+
+	%\begin{center}
+	%    Dedicated to the loving memory of Rudolf Miede. \\ \smallskip
+	%    1939\,--\,2005
+	%\end{center}
+}

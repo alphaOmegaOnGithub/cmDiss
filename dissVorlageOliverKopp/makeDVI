@@ -1,0 +1,8 @@
+cd ausarbeitung
+rm makeDVI.log
+latex -interaction=nonstopmode -src-specials diss >> makeDVI.log
+bibtex diss1 >> makeDVI.log
+bibtex diss2 >> makeDVI.log
+latex -interaction=nonstopmode -src-specials diss >> makeDVI.log
+latex -interaction=nonstopmode -src-specials diss >> makeDVI.log
+cd ..

@@ -1,0 +1,39 @@
+%\newcommand{\TBlabel}[1]{\textbf{#1}\hfil}
+%\newenvironment{TBlist}{%
+%  \list{}{\labelwidth 35mm \leftmargin 55mm % alt: 35/60 mm % TODO: modified by DM: was 35 /60 originally
+%          \rightmargin 10mm \let\makelabel\TBlabel}
+%}{\endlist}
+
+\newcommand\btypeout[1]{\bhrule\typeout{\space #1}\bhrule}
+
+\newcommand{\myinitials}[2]{\lettrine[lines=1]{#1}{#2}}
+
+\newcommand{\cvSpace}{\addlinespace[.5ex]}
+
+\newcommand{\ovalbox}[1]{\unitlength1ex\begin{picture}(2.5,2.5)
+\put(1.25,0.75){\circle{2.5}}\put(1.25,0.75){\makebox(0,0){#1}}\end{picture}}
+
+%\newcommand{\mypart}[1]{\addtocounter{page}{-1}\thispagestyle{empty}\part{#1}}
+
+% set the page style of parts empty...
+\renewcommand*{\partpagestyle}{empty}
+
+\newcommand{\eg}{e.\,g., }
+\newcommand{\Eg}{E.\,g., }
+\newcommand{\ie}{i.\,e., }
+\newcommand{\Ie}{I.\,e., }
+
+%
+% foobar - start
+%
+\newcommand{\cmd}[1]{\textbf{#1}}
+\newcommand{\param}[1]{\textit{#1}}
+\newcommand{\varname}[1]{\textit{#1}}
+\newcommand{\NET}{Network Emulation Testbed}
+\newcommand{\fixme}[1]{{\small\sl {\bf FIXME:} #1}} % comment
+%
+% foobar - end
+%
+
+%\renewcommand\texttt[1]{{\sffamily\color{ttcolor}#1}}
+\renewcommand\texttt[1]{{\sffamily\textbf{#1}}}

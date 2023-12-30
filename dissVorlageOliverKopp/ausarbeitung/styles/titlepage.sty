@@ -1,0 +1,106 @@
+%% title page
+
+\newcommand{\TBlabel}[1]{\textbf{#1}\hfil}
+\newenvironment{TBlist}{%
+% A4
+  \list{}{\labelwidth 35mm \leftmargin 55mm % alt: 35/60 mm % TODO: modified by DM: was 35 /60 originally
+          \rightmargin 10mm \let\makelabel\TBlabel}
+% A5
+%  \list{}{\labelwidth 35mm \leftmargin 50mm % alt: 35/60 mm % TODO: modified by DM: was 35 /60 originally
+%          \rightmargin 10mm \let\makelabel\TBlabel}
+}{\endlist}
+
+\newcommand*{\firstexaminer}[1]{\def\@firstexaminer{#1\xspace}}
+\def\@firstexaminer{
+	\@latex@warning@no@line{Package `scrthesis': No \noexpand\firstexaminer given}}
+\newcommand*{\secondexaminer}[1]{\def\@secondexaminer{#1\xspace}}
+\def\@secondexaminer{
+	\@latex@warning@no@line{Package `scrthesis': No \noexpand\secondexaminer given}}
+\newcommand*{\dateofexamination}[1]{\def\@dateofexamination{#1\xspace}}
+\def\@dateofexamination{
+	\@latex@warning@no@line{Package `scrthesis': No \noexpand\dateofexamination given}}
+\newcommand*{\placeofbirth}[1]{\def\@placeofbirth{#1\xspace}}
+\def\@placeofbirth{
+	\@latex@warning@no@line{Package `scrthesis': No \noexpand\placeofbirth given}}
+\newcommand*{\faculty}[1]{\def\@faculty{#1\xspace}}
+\def\@faculty{
+	\@latex@warning@no@line{Package `scrthesis': No \noexpand\faculty given}}
+\newcommand*{\department}[1]{\def\@department{#1\xspace}}
+\def\@department{
+	\@latex@warning@no@line{Package `scrthesis': No \noexpand\department given}}
+\newcommand*{\university}[1]{\def\@university{#1\xspace}}
+\def\@university{Universit\"at Stuttgart\xspace}
+
+
+\renewcommand\maketitle{
+  %\btypeout{Title Page}
+  \thispagestyle{empty}
+  \begin{titlepage}
+    \let\footnotesize\small
+    \let\footnoterule\relax
+    \let \footnote \thanks
+    \setcounter{footnote}{0}
+    %\null\vfil
+    %\vskip 60\p@
+    \begin{center}
+      \setlength{\parskip}{0pt}
+       \includegraphics[width=6cm]{special/ustutt-logo}
+      %\vfill % A5
+	  \vskip 10\p@ % A4
+      %\vspace{10pt} % A5
+	  %\vspace{20pt} % A4 - Schriftgröße 12
+	  \vspace{20pt} % A4 - Schriftgröße 13
+      {\LARGE \bf \@title \par}
+      {\LARGE \@subtitle \par}
+
+      %\vspace{20pt} % A5
+	  %\vspace{60pt} % A4 - Schriftgröße 12
+	  \vspace{40pt} % A4 - Schriftgröße 13
+      {Von der \@faculty der \@university
+       zur Erlangung der Würde eines Doktors der
+       Naturwissenschaften (Dr. rer. nat.) genehmigte Abhandlung \par}
+
+      %\vspace{30pt} % A5
+	  \vspace{50pt} % A4
+      {Vorgelegt von \par}
+      {\large \@author \par}
+      {aus \@placeofbirth \par}
+
+      %\vspace{30pt} % A5
+	  %\vspace{50pt} % A4 - Schriftgröße 12
+	  \vspace{35pt} % A4 - Schriftgröße 13
+      \begin{TBlist}%
+        \item[Hauptberichter:]\@firstexaminer
+        \item[Mitberichter:]\@secondexaminer
+        \item[Tag der m\"undlichen Pr\"ufung:]\@dateofexamination
+      \end{TBlist}%
+
+	  %\vspace{20pt} % A5
+	  %\vspace{40pt} % A4 - Schriftgröße 12
+	  \vspace{30pt} % A4 - Schriftgröße 13
+	  \@department\par
+      %Institut für Architektur von Anwendungssystemen\par
+	  %der Universität Stuttgart\par
+	  
+	  %\vspace{20pt} % A5
+	  %\vspace{40pt} % A4 - Schriftgröße 12
+	  \vspace{20pt} % A4 - Schriftgröße 13
+      %{\@date \par}
+      {\the\year \par}
+    \end{center}
+
+    \par
+    \@thanks
+    \vfil\null
+  \end{titlepage}
+
+  \setcounter{footnote}{0}
+  \global\let\thanks\relax
+  \global\let\maketitle\relax
+  \global\let\@thanks\@empty
+
+  \newpage
+  \thispagestyle{empty}
+  \mbox{}
+  \cleardoublepage
+}
